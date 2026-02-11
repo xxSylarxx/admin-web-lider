@@ -1,0 +1,9 @@
+[14-Jan-2026 10:49:25 UTC] PHP Warning:  Undefined array key "nombres" in /home/xkiwgtqp/lidersd.edu.pe/lib/correo_mailer.php on line 13
+[14-Jan-2026 10:49:25 UTC] PHP Warning:  Undefined array key "apellidos" in /home/xkiwgtqp/lidersd.edu.pe/lib/correo_mailer.php on line 14
+[14-Jan-2026 10:49:25 UTC] PHP Warning:  Undefined array key "telefono" in /home/xkiwgtqp/lidersd.edu.pe/lib/correo_mailer.php on line 15
+[14-Jan-2026 10:49:25 UTC] PHP Warning:  Undefined array key "correo" in /home/xkiwgtqp/lidersd.edu.pe/lib/correo_mailer.php on line 16
+[14-Jan-2026 10:49:25 UTC] PHP Warning:  Undefined array key "nivel" in /home/xkiwgtqp/lidersd.edu.pe/lib/correo_mailer.php on line 17
+[14-Jan-2026 10:49:25 UTC] PHP Warning:  Undefined array key "grado" in /home/xkiwgtqp/lidersd.edu.pe/lib/correo_mailer.php on line 18
+[14-Jan-2026 10:49:25 UTC] PHP Warning:  Undefined array key "consulta" in /home/xkiwgtqp/lidersd.edu.pe/lib/correo_mailer.php on line 19
+[10-Feb-2026 19:07:47 UTC] PHP Warning:  Undefined array key "grado" in /home/xkiwgtqp/lidersd.edu.pe/lib/correo_mailer.php on line 18
+[10-Feb-2026 19:07:47 UTC] PHP Warning:  Undefined array key "grado" in /home/xkiwgtqp/lidersd.edu.pe/lib/correo_mailer.php on line 18

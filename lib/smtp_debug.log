@@ -1,0 +1,686 @@
+2026-01-10 23:39:08	1	SMTP ERROR: Failed to connect to server: Network is unreachable (101)
+2026-01-10 23:39:08	2	SMTP Error: Could not connect to SMTP host. Failed to connect to server
+2026-01-10 23:39:43	1	SMTP ERROR: Failed to connect to server: Network is unreachable (101)
+2026-01-10 23:39:43	2	SMTP Error: Could not connect to SMTP host. Failed to connect to server
+2026-01-10 23:40:32	1	SMTP ERROR: Failed to connect to server: Network is unreachable (101)
+2026-01-10 23:40:32	2	SMTP Error: Could not connect to SMTP host. Failed to connect to server
+2026-01-10 23:41:08	2	SERVER -> CLIENT: 220 yl-aiapaec.yachay.pe ESMTP Exim 4.99.1
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: EHLO lidersd.edu.pe
+
+2026-01-10 23:41:08	2	SERVER -> CLIENT: 250-yl-aiapaec.yachay.pe Hello lidersd.edu.pe [161.132.57.202]
+250-SIZE 52428800
+250-LIMITS MAILMAX=1000 RCPTMAX=25
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: AUTH LOGIN
+
+2026-01-10 23:41:08	2	SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: [credentials hidden]
+2026-01-10 23:41:08	2	SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: [credentials hidden]
+2026-01-10 23:41:08	2	SERVER -> CLIENT: 235 Authentication succeeded
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: MAIL FROM:<formulario@lidersd.edu.pe>
+
+2026-01-10 23:41:08	2	SERVER -> CLIENT: 250 OK
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: RCPT TO:<admision@lidersd.edu.pe>
+
+2026-01-10 23:41:08	2	SERVER -> CLIENT: 250 Accepted
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: DATA
+
+2026-01-10 23:41:08	2	SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: Date: Sat, 10 Jan 2026 23:41:08 +0000
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: To: admision@lidersd.edu.pe
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: From: "PAG. WEB - SANTO DOMINGO EL LIDER" <formulario@lidersd.edu.pe>
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: Reply-To: Web Santo Domingo <correos@correos.lidersd.edu.pe>
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: Subject: FORMULARIO DE CONTACTO
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: Message-ID: <HbbrUD6rrqkMm8ovUiQpwqmK0MEcxoDx8fERIGvlU@lidersd.edu.pe>
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: X-Mailer: PHPMailer 6.6.5 (https://github.com/PHPMailer/PHPMailer)
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: MIME-Version: 1.0
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: 
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: 
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER:                     <h4><b>INFORMACIÓN</b></h4>
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER:                     <p><b>Nombres : </b>dadas</p>
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER:                     <p><b>Apellidos : </b>asdsad</p>
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER:                     <p><b>Teléfono : </b>23432</p>
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER:                     <p><b>Correo : </b>asd@demo.com</p>
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER:                     <p><b>Nivel : </b>primaria</p>
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER:                     <p><b>Grado : </b>2</p>
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER:                     <p><b>Consulta : </b>asdasdsa</p>
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: 
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: .
+
+2026-01-10 23:41:08	2	SERVER -> CLIENT: 250 OK id=1veiZy-0000000BV6c-0QMt
+
+2026-01-10 23:41:08	1	CLIENT -> SERVER: QUIT
+
+2026-01-10 23:41:08	2	SERVER -> CLIENT: 221 yl-aiapaec.yachay.pe closing connection
+
+2026-01-10 23:41:56	2	SERVER -> CLIENT: 220 yl-aiapaec.yachay.pe ESMTP Exim 4.99.1
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: EHLO lidersd.edu.pe
+
+2026-01-10 23:41:56	2	SERVER -> CLIENT: 250-yl-aiapaec.yachay.pe Hello lidersd.edu.pe [161.132.57.202]
+250-SIZE 52428800
+250-LIMITS MAILMAX=1000 RCPTMAX=25
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: AUTH LOGIN
+
+2026-01-10 23:41:56	2	SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: [credentials hidden]
+2026-01-10 23:41:56	2	SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: [credentials hidden]
+2026-01-10 23:41:56	2	SERVER -> CLIENT: 235 Authentication succeeded
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: MAIL FROM:<formulario@lidersd.edu.pe>
+
+2026-01-10 23:41:56	2	SERVER -> CLIENT: 250 OK
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: RCPT TO:<admision@lidersd.edu.pe>
+
+2026-01-10 23:41:56	2	SERVER -> CLIENT: 250 Accepted
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: DATA
+
+2026-01-10 23:41:56	2	SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: Date: Sat, 10 Jan 2026 23:41:56 +0000
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: To: admision@lidersd.edu.pe
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: From: "PAG. WEB - SANTO DOMINGO EL LIDER" <formulario@lidersd.edu.pe>
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: Reply-To: Web Santo Domingo <correos@correos.lidersd.edu.pe>
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: Subject: FORMULARIO DE CONTACTO
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: Message-ID: <nraHH57V5LDrMEbmdSYDxtqBxg7WLOpWUEymBbKm30@lidersd.edu.pe>
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: X-Mailer: PHPMailer 6.6.5 (https://github.com/PHPMailer/PHPMailer)
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: MIME-Version: 1.0
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: 
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: 
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER:                     <h4><b>INFORMACIÓN</b></h4>
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER:                     <p><b>Nombres : </b>sdsa</p>
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER:                     <p><b>Apellidos : </b>dasdsadas</p>
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER:                     <p><b>Teléfono : </b>486351135</p>
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER:                     <p><b>Correo : </b>demo@demo.com</p>
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER:                     <p><b>Nivel : </b>primaria</p>
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER:                     <p><b>Grado : </b>1</p>
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER:                     <p><b>Consulta : </b>sadsadas</p>
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: 
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: .
+
+2026-01-10 23:41:56	2	SERVER -> CLIENT: 250 OK id=1veiaj-0000000BVDt-2YgD
+
+2026-01-10 23:41:56	1	CLIENT -> SERVER: QUIT
+
+2026-01-10 23:41:56	2	SERVER -> CLIENT: 221 yl-aiapaec.yachay.pe closing connection
+
+2026-01-10 23:43:25	2	SERVER -> CLIENT: 220 yl-aiapaec.yachay.pe ESMTP Exim 4.99.1
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: EHLO lidersd.edu.pe
+
+2026-01-10 23:43:25	2	SERVER -> CLIENT: 250-yl-aiapaec.yachay.pe Hello lidersd.edu.pe [161.132.57.202]
+250-SIZE 52428800
+250-LIMITS MAILMAX=1000 RCPTMAX=25
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: AUTH LOGIN
+
+2026-01-10 23:43:25	2	SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: [credentials hidden]
+2026-01-10 23:43:25	2	SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: [credentials hidden]
+2026-01-10 23:43:25	2	SERVER -> CLIENT: 235 Authentication succeeded
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: MAIL FROM:<formulario@lidersd.edu.pe>
+
+2026-01-10 23:43:25	2	SERVER -> CLIENT: 250 OK
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: RCPT TO:<admision@lidersd.edu.pe>
+
+2026-01-10 23:43:25	2	SERVER -> CLIENT: 250 Accepted
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: DATA
+
+2026-01-10 23:43:25	2	SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: Date: Sat, 10 Jan 2026 23:43:25 +0000
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: To: admision@lidersd.edu.pe
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: From: "PAG. WEB - SANTO DOMINGO EL LIDER" <formulario@lidersd.edu.pe>
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: Reply-To: Web Santo Domingo <correos@correos.lidersd.edu.pe>
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: Subject: FORMULARIO DE CONTACTO
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: Message-ID: <WSX3ZmnybdQrD0WZZKQwioUyXDQpwOjbts6EQxzlMoY@lidersd.edu.pe>
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: X-Mailer: PHPMailer 6.6.5 (https://github.com/PHPMailer/PHPMailer)
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: MIME-Version: 1.0
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: 
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: 
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER:                     <h4><b>INFORMACIÓN</b></h4>
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER:                     <p><b>Nombres : </b>Axel </p>
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER:                     <p><b>Apellidos : </b>Molina</p>
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER:                     <p><b>Teléfono : </b>4818</p>
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER:                     <p><b>Correo : </b>demo@demo.com</p>
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER:                     <p><b>Nivel : </b>primaria</p>
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER:                     <p><b>Grado : </b>1</p>
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER:                     <p><b>Consulta : </b>asdffdsfsd</p>
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: 
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: .
+
+2026-01-10 23:43:25	2	SERVER -> CLIENT: 250 OK id=1veicA-0000000BVNw-1asf
+
+2026-01-10 23:43:25	1	CLIENT -> SERVER: QUIT
+
+2026-01-10 23:43:25	2	SERVER -> CLIENT: 221 yl-aiapaec.yachay.pe closing connection
+
+2026-01-11 03:47:23	2	SERVER -> CLIENT: 220 yl-aiapaec.yachay.pe ESMTP Exim 4.99.1
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: EHLO lidersd.edu.pe
+
+2026-01-11 03:47:23	2	SERVER -> CLIENT: 250-yl-aiapaec.yachay.pe Hello lidersd.edu.pe [161.132.57.202]
+250-SIZE 52428800
+250-LIMITS MAILMAX=1000 RCPTMAX=25
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: AUTH LOGIN
+
+2026-01-11 03:47:23	2	SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: [credentials hidden]
+2026-01-11 03:47:23	2	SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: [credentials hidden]
+2026-01-11 03:47:23	2	SERVER -> CLIENT: 235 Authentication succeeded
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: MAIL FROM:<formulario@lidersd.edu.pe>
+
+2026-01-11 03:47:23	2	SERVER -> CLIENT: 250 OK
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: RCPT TO:<admision@lidersd.edu.pe>
+
+2026-01-11 03:47:23	2	SERVER -> CLIENT: 250 Accepted
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: DATA
+
+2026-01-11 03:47:23	2	SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: Date: Sun, 11 Jan 2026 03:47:22 +0000
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: To: admision@lidersd.edu.pe
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: From: "PAG. WEB - SANTO DOMINGO EL LIDER" <formulario@lidersd.edu.pe>
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: Reply-To: Web Santo Domingo <correos@correos.lidersd.edu.pe>
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: Subject: FORMULARIO DE CONTACTO
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: Message-ID: <nO2mUuVzMiiS8k2XnqS8sFLOnugdrFPiG6ChZOxuFo@lidersd.edu.pe>
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: X-Mailer: PHPMailer 6.6.5 (https://github.com/PHPMailer/PHPMailer)
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: MIME-Version: 1.0
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: 
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: 
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER:                     <h4><b>INFORMACIÓN</b></h4>
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER:                     <p><b>Nombres : </b>dsadas</p>
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER:                     <p><b>Apellidos : </b>asdsa</p>
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER:                     <p><b>Teléfono : </b>1866</p>
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER:                     <p><b>Correo : </b>asdsad@demo.com</p>
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER:                     <p><b>Nivel : </b>inicial</p>
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER:                     <p><b>Grado : </b>4años</p>
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER:                     <p><b>Consulta : </b>desde la web</p>
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: 
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: .
+
+2026-01-11 03:47:23	2	SERVER -> CLIENT: 250 OK id=1vemQG-0000000C7ep-1F4v
+
+2026-01-11 03:47:23	1	CLIENT -> SERVER: QUIT
+
+2026-01-11 03:47:23	2	SERVER -> CLIENT: 221 yl-aiapaec.yachay.pe closing connection
+
+2026-01-11 04:01:04	2	SERVER -> CLIENT: 220 yl-aiapaec.yachay.pe ESMTP Exim 4.99.1
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: EHLO lidersd.edu.pe
+
+2026-01-11 04:01:04	2	SERVER -> CLIENT: 250-yl-aiapaec.yachay.pe Hello lidersd.edu.pe [161.132.57.202]
+250-SIZE 52428800
+250-LIMITS MAILMAX=1000 RCPTMAX=25
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: AUTH LOGIN
+
+2026-01-11 04:01:04	2	SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: [credentials hidden]
+2026-01-11 04:01:04	2	SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: [credentials hidden]
+2026-01-11 04:01:04	2	SERVER -> CLIENT: 235 Authentication succeeded
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: MAIL FROM:<formulario@lidersd.edu.pe>
+
+2026-01-11 04:01:04	2	SERVER -> CLIENT: 250 OK
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: RCPT TO:<admision@lidersd.edu.pe>
+
+2026-01-11 04:01:04	2	SERVER -> CLIENT: 250 Accepted
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: DATA
+
+2026-01-11 04:01:04	2	SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: Date: Sun, 11 Jan 2026 04:01:04 +0000
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: To: admision@lidersd.edu.pe
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: From: "PAG. WEB - SANTO DOMINGO EL LIDER" <formulario@lidersd.edu.pe>
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: Reply-To: Web Santo Domingo <correos@correos.lidersd.edu.pe>
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: Subject: FORMULARIO DE CONTACTO
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: Message-ID: <SEwpBE4cGFoIchHljPSFWVucxmMJRMDXpWlV7P9jzI@lidersd.edu.pe>
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: X-Mailer: PHPMailer 6.6.5 (https://github.com/PHPMailer/PHPMailer)
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: MIME-Version: 1.0
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: 
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: 
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER:                     <h4><b>INFORMACIÓN</b></h4>
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER:                     <p><b>Nombres : </b>Axel</p>
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER:                     <p><b>Apellidos : </b>Molina</p>
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER:                     <p><b>Teléfono : </b>123456</p>
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER:                     <p><b>Correo : </b>demo@demo.com</p>
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER:                     <p><b>Nivel : </b>inicial</p>
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER:                     <p><b>Grado : </b>4años</p>
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER:                     <p><b>Consulta : </b>sdsadasd</p>
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: 
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: .
+
+2026-01-11 04:01:04	2	SERVER -> CLIENT: 250 OK id=1vemdV-0000000CBmw-1r4p
+
+2026-01-11 04:01:04	1	CLIENT -> SERVER: QUIT
+
+2026-01-11 04:01:04	2	SERVER -> CLIENT: 221 yl-aiapaec.yachay.pe closing connection
+
+2026-01-24 21:55:11	2	SERVER -> CLIENT: 220 yl-aiapaec.yachay.pe ESMTP Exim 4.99.1
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: EHLO lidersd.edu.pe
+
+2026-01-24 21:55:11	2	SERVER -> CLIENT: 250-yl-aiapaec.yachay.pe Hello lidersd.edu.pe [161.132.57.202]
+250-SIZE 52428800
+250-LIMITS MAILMAX=1000 RCPTMAX=25
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: AUTH LOGIN
+
+2026-01-24 21:55:11	2	SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: [credentials hidden]
+2026-01-24 21:55:11	2	SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: [credentials hidden]
+2026-01-24 21:55:11	2	SERVER -> CLIENT: 235 Authentication succeeded
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: MAIL FROM:<formulario@lidersd.edu.pe>
+
+2026-01-24 21:55:11	2	SERVER -> CLIENT: 250 OK
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: RCPT TO:<admision@lidersd.edu.pe>
+
+2026-01-24 21:55:11	2	SERVER -> CLIENT: 250 Accepted
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: DATA
+
+2026-01-24 21:55:11	2	SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: Date: Sat, 24 Jan 2026 21:55:10 +0000
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: To: admision@lidersd.edu.pe
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: From: "PAG. WEB - SANTO DOMINGO EL LIDER" <formulario@lidersd.edu.pe>
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: Reply-To: Web Santo Domingo <correos@correos.lidersd.edu.pe>
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: Subject: FORMULARIO DE CONTACTO
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: Message-ID: <aIg4DwHulXVpKcHupHjbk1mBN2JCqZRiIhO958Xt8@lidersd.edu.pe>
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: X-Mailer: PHPMailer 6.6.5 (https://github.com/PHPMailer/PHPMailer)
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: MIME-Version: 1.0
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: 
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: 
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER:                     <h4><b>INFORMACIÓN</b></h4>
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER:                     <p><b>Nombres : </b>Yadhira</p>
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER:                     <p><b>Apellidos : </b>Calderón</p>
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER:                     <p><b>Teléfono : </b>986890241</p>
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER:                     <p><b>Correo : </b>calderonyadhira13@gmail.com</p>
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER:                     <p><b>Nivel : </b>secundaria</p>
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER:                     <p><b>Grado : </b>3</p>
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER:                     <p><b>Consulta : </b>Averiguar </p>
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: 
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: .
+
+2026-01-24 21:55:11	2	SERVER -> CLIENT: 250 OK id=1vjlb7-00000007wxk-4AQQ
+
+2026-01-24 21:55:11	1	CLIENT -> SERVER: QUIT
+
+2026-01-24 21:55:11	2	SERVER -> CLIENT: 221 yl-aiapaec.yachay.pe closing connection
+
+2026-02-09 14:54:48	2	SERVER -> CLIENT: 220 yl-aiapaec.yachay.pe ESMTP Exim 4.99.1
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: EHLO lidersd.edu.pe
+
+2026-02-09 14:54:48	2	SERVER -> CLIENT: 250-yl-aiapaec.yachay.pe Hello lidersd.edu.pe [161.132.57.202]
+250-SIZE 52428800
+250-LIMITS MAILMAX=1000 RCPTMAX=25
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: AUTH LOGIN
+
+2026-02-09 14:54:48	2	SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: [credentials hidden]
+2026-02-09 14:54:48	2	SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: [credentials hidden]
+2026-02-09 14:54:48	2	SERVER -> CLIENT: 235 Authentication succeeded
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: MAIL FROM:<formulario@lidersd.edu.pe>
+
+2026-02-09 14:54:48	2	SERVER -> CLIENT: 250 OK
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: RCPT TO:<admision@lidersd.edu.pe>
+
+2026-02-09 14:54:48	2	SERVER -> CLIENT: 250 Accepted
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: DATA
+
+2026-02-09 14:54:48	2	SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: Date: Mon, 9 Feb 2026 14:54:48 +0000
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: To: admision@lidersd.edu.pe
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: From: "PAG. WEB - SANTO DOMINGO EL LIDER" <formulario@lidersd.edu.pe>
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: Reply-To: Web Santo Domingo <correos@correos.lidersd.edu.pe>
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: Subject: FORMULARIO DE CONTACTO
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: Message-ID: <MQ6ryrkKEIJtg9cwewPXYm8k2z6vVd3tqXiWFzLp17k@lidersd.edu.pe>
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: X-Mailer: PHPMailer 6.6.5 (https://github.com/PHPMailer/PHPMailer)
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: MIME-Version: 1.0
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: 
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: 
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER:                     <h4><b>INFORMACIÓN</b></h4>
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER:                     <p><b>Nombres : </b> Wilson </p>
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER:                     <p><b>Apellidos : </b>Quezada</p>
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER:                     <p><b>Teléfono : </b>970157889</p>
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER:                     <p><b>Correo : </b>adriano.20quezada@gmail.com</p>
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER:                     <p><b>Nivel : </b>primaria</p>
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER:                     <p><b>Grado : </b>5</p>
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER:                     <p><b>Consulta : </b> Quiero  que me faciliten mi boleta de matricula que ya fue cancelada</p>
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: 
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: .
+
+2026-02-09 14:54:48	2	SERVER -> CLIENT: 250 OK id=1vpSf3-0000000Awc2-0Wu9
+
+2026-02-09 14:54:48	1	CLIENT -> SERVER: QUIT
+
+2026-02-09 14:54:48	2	SERVER -> CLIENT: 221 yl-aiapaec.yachay.pe closing connection
+
+2026-02-10 19:09:40	2	SERVER -> CLIENT: 220 yl-aiapaec.yachay.pe ESMTP Exim 4.99.1
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: EHLO lidersd.edu.pe
+
+2026-02-10 19:09:40	2	SERVER -> CLIENT: 250-yl-aiapaec.yachay.pe Hello lidersd.edu.pe [161.132.57.202]
+250-SIZE 52428800
+250-LIMITS MAILMAX=1000 RCPTMAX=25
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: AUTH LOGIN
+
+2026-02-10 19:09:40	2	SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: [credentials hidden]
+2026-02-10 19:09:40	2	SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: [credentials hidden]
+2026-02-10 19:09:40	2	SERVER -> CLIENT: 235 Authentication succeeded
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: MAIL FROM:<formulario@lidersd.edu.pe>
+
+2026-02-10 19:09:40	2	SERVER -> CLIENT: 250 OK
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: RCPT TO:<admision@lidersd.edu.pe>
+
+2026-02-10 19:09:40	2	SERVER -> CLIENT: 250 Accepted
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: DATA
+
+2026-02-10 19:09:40	2	SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: Date: Tue, 10 Feb 2026 19:09:40 +0000
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: To: admision@lidersd.edu.pe
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: From: "PAG. WEB - SANTO DOMINGO EL LIDER" <formulario@lidersd.edu.pe>
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: Reply-To: Web Santo Domingo <correos@correos.lidersd.edu.pe>
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: Subject: FORMULARIO DE CONTACTO
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: Message-ID: <MnOw2vkwaPEi5mQSLCwKLWJJeyQA0EatzesNz5HHk@lidersd.edu.pe>
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: X-Mailer: PHPMailer 6.6.5 (https://github.com/PHPMailer/PHPMailer)
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: MIME-Version: 1.0
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: 
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: 
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER:                     <h4><b>INFORMACIÓN</b></h4>
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER:                     <p><b>Nombres : </b>Cecilia </p>
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER:                     <p><b>Apellidos : </b>HUAMANI Huamaccto </p>
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER:                     <p><b>Teléfono : </b>968390988</p>
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER:                     <p><b>Correo : </b>ceciliahuamanihuamacto@gmail.com</p>
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER:                     <p><b>Nivel : </b>inicial</p>
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER:                     <p><b>Grado : </b>5años</p>
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER:                     <p><b>Consulta : </b>Buenas tardes disculpe la molestia quisiera consultar bueno saber si me podría mandar el modelo del forrado de iniciales 5 años una imagen si tuviera porque en la lista me pone y me ponen este me piden que tenga este el título foto nombre pero foto es foto del niño o foto imagen del curso por favor si me pudiera facilitar el modelo que me ha mandado a forrar los cuadernos sino no entiendo cómo poner qué foto poner le agradecería mucho gracias</p>
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: 
+
+2026-02-10 19:09:40	1	CLIENT -> SERVER: .
+
+2026-02-10 19:09:41	2	SERVER -> CLIENT: 250 OK id=1vpt7G-0000000HDVo-0BIc
+
+2026-02-10 19:09:41	1	CLIENT -> SERVER: QUIT
+
+2026-02-10 19:09:41	2	SERVER -> CLIENT: 221 yl-aiapaec.yachay.pe closing connection
+

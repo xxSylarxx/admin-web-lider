@@ -1,0 +1,35 @@
+
+    .modal-content {
+        border-radius: 15px;
+        padding: 20px;
+    }
+
+    .modal-header {
+        border-bottom: none;
+        text-align: center;
+    }
+
+    .modal-title {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .form-control,
+    .form-select {
+        border-radius: 10px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        background-color: var(--color1);
+        border: none;
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 50px;
+    }
+    .enlace-politicas{
+        color:var(--color1);
+    }
+    .enlace-politicas:hover{
+        color:var(--color1);
+    }
