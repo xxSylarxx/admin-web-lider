@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Colegio Santo Domingo El Líder — Galería</title>
-    <link rel="icon" href="./public/img/icons/escudo.png">
+    <link rel="icon" href="<?= PATH_PUBLIC ?>/img/icons/escudo.png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./public/css/web.css">
-    <link rel="stylesheet" href="./public/css/networks.css">
-    <link rel="stylesheet" href="./public/css/card-animation.css">
-    <link rel="stylesheet" href="./public/css/modal-contacto.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/web.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/networks.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/card-animation.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/modal-contacto.css">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/fonts/font-awesone/css/all.min.css">
     <style>
@@ -29,15 +29,15 @@
     </style>
 </head>
 <body>
-    <?php include './partials/header.php'; ?>
-    <?php include './partials/redes.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
     <section class="container-fluid portada px-0">
         <div class="titleContainer">
             <div class="animate__animated animate__fadeInLeft">
                 <h2 class="title1">Galería</h2>
             </div>
         </div>
-        <img src="./public/img/portadas/portada_interna.png" alt="">
+        <img src="<?= PATH_PUBLIC ?>/img/portadas/portada_interna.png" alt="">
     </section>
     <section class="container py-5">
         <div class="row justify-content-center">
@@ -51,11 +51,11 @@
             </div>
         </div>
     </section>
-    <?php include './partials/footer.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>
     <script>
         window.FontAwesomeConfig = { autoReplaceSvg: false };
     </script>
     <script src="<?= PATH_PUBLIC ?>/fonts/font-awesone/js/all.min.js"></script>
-    <script src="./public/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= PATH_PUBLIC ?>/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Colegio Santo Domingo El Líder — Comunicados</title>
-    <link rel="icon" href="./public/img/icons/escudo.png">
+    <link rel="icon" href="<?= PATH_PUBLIC ?>/img/icons/escudo.png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./public/css/web.css">
-    <link rel="stylesheet" href="./public/css/networks.css">
-    <link rel="stylesheet" href="./public/css/card-animation.css">
-    <link rel="stylesheet" href="./public/css/modal-contacto.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/web.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/networks.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/card-animation.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/modal-contacto.css">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/fonts/font-awesone/css/all.min.css">
     <style>
@@ -68,15 +68,15 @@
 </head>
 
 <body>
-    <?php include './partials/header.php'; ?>
-    <?php include './partials/redes.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
+    <<?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
     <section class="container-fluid portada px-0">
         <div class="titleContainer">
             <div class="animate__animated animate__fadeInLeft">
                 <h2 class="title1">Publicaciones</h2>
             </div>
         </div>
-        <img src="./public/img/portadas/portada_interna.png" alt="">
+        <img src="<?= PATH_PUBLIC ?>/img/portadas/portada_interna.png" alt="">
     </section>
     <section class="publicaciones-section">
         <div class="container">
@@ -93,7 +93,7 @@
                 <div class="col-lg-4 pt-5">
                     <div class="card-galeria card3">
                         <div class="container-galeria">
-                            <img id="portada-galeria" src="./public/img/galeria/visitas_guiadas.jpg" alt="galeria">
+                            <img id="portada-galeria" src="<?= PATH_PUBLIC ?>/img/galeria/visitas_guiadas.jpg" alt="galeria">
                         </div>
                         <div class="details">
                             <div class="row d-flex">
@@ -105,7 +105,7 @@
                                     </div>
                                 </div>
                                 <div class="col-4 d-flex justify-content-end align-items-start">
-                                    <img class="d-block mx-4" src="./public/img/icons/escudo.png" width="60%" alt="">
+                                    <img class="d-block mx-4" src="<?= PATH_PUBLIC ?>/img/icons/escudo.png" width="60%" alt="">
                                 </div>
                             </div>
                         </div>
@@ -114,7 +114,7 @@
                 <div class="col-lg-4 pt-5">
                     <div class="card-galeria card3">
                         <div class="container-galeria">
-                            <img id="portada-galeria" src="./public/img/galeria/fachada.jpeg" alt="galeria">
+                            <img id="portada-galeria" src="<?= PATH_PUBLIC ?>/img/galeria/fachada.jpeg" alt="galeria">
                         </div>
                         <div class="details">
                             <div class="row d-flex">
@@ -126,7 +126,7 @@
                                     </div>
                                 </div>
                                 <div class="col-4 d-flex justify-content-end align-items-start">
-                                    <img class="d-block mx-4" src="./public/img/icons/escudo.png" width="60%" alt="">
+                                    <img class="d-block mx-4" src="<?= PATH_PUBLIC ?>/img/icons/escudo.png" width="60%" alt="">
                                 </div>
                             </div>
                         </div>
@@ -135,7 +135,7 @@
                 <div class="col-lg-4 pt-5">
                     <div class="card-galeria card3">
                         <div class="container-galeria">
-                            <img id="portada-galeria" src="./public/img/galeria/p-boletin.jpg" alt="galeria">
+                            <img id="portada-galeria" src="<?= PATH_PUBLIC ?>/img/galeria/p-boletin.jpg" alt="galeria">
                         </div>
                         <div class="details">
                             <div class="row d-flex">
@@ -147,7 +147,7 @@
                                     </div>
                                 </div>
                                 <div class="col-4 d-flex justify-content-end align-items-start">
-                                    <img class="d-block mx-4" src="./public/img/icons/escudo.png" width="60%" alt="">
+                                    <img class="d-block mx-4" src="<?= PATH_PUBLIC ?>/img/icons/escudo.png" width="60%" alt="">
                                 </div>
                             </div>
                         </div>
@@ -156,14 +156,14 @@
             </div>
         </div>
     </section>
-    <?php include './partials/footer.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>
     <script>
         window.FontAwesomeConfig = {
             autoReplaceSvg: false
         };
     </script>
     <script src="<?= PATH_PUBLIC ?>/fonts/font-awesone/js/all.min.js"></script>
-    <script src="./public/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= PATH_PUBLIC ?>/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

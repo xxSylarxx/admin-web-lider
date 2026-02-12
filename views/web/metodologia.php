@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Colegio Santo Domingo El Líder — Metodología</title>
-    <link rel="icon" href="./public/img/icons/escudo.png">
+    <link rel="icon" href="<?= PATH_PUBLIC ?>/img/icons/escudo.png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./public/css/web.css">
-    <link rel="stylesheet" href="./public/css/networks.css">
-    <link rel="stylesheet" href="./public/css/card-animation.css">
-    <link rel="stylesheet" href="./public/css/modal-contacto.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/web.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/networks.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/card-animation.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/modal-contacto.css">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/fonts/font-awesone/css/all.min.css">
     <!-- OwlCarousel CSS necesario para el carrusel -->
@@ -95,8 +95,8 @@
 </head>
 
 <body>
-    <?php include './partials/header.php'; ?>
-    <?php include './partials/redes.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
     <section class="container-fluid portada px-0">
         <div class="titleContainer">
             <div class="animate__animated animate__fadeInLeft">
@@ -105,7 +105,7 @@
                 </h2>
             </div>
         </div>
-        <img src="./public/img/portadas/portada_interna.png" alt="">
+        <img src="<?= PATH_PUBLIC ?>/img/portadas/portada_interna.png" alt="">
     </section>
     <section class="bienvenidos-section py-5" style="background-color: white;">
         <div class="container py-4">
@@ -126,7 +126,7 @@
                         <div class="decoration-circle decoration-1"></div>
                         <div class="decoration-circle decoration-2"></div>
                         <div class="welcome-image2-card d-flex justify-content-center align-items-center">
-                            <img src="./public/img/web/portada_inicial.jpg" alt="Colegio Santo Domingo El Líder" class="welcome-image2">
+                            <img src="<?= PATH_PUBLIC ?>/img/web/portada_inicial.jpg" alt="Colegio Santo Domingo El Líder" class="welcome-image2">
                         </div>
                     </div>
                 </div> -->
@@ -168,8 +168,8 @@
 
         @media only screen and (max-width: 650px) {
             #portada {
-                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .6)), url("./public/img/web/banner_infra.jpg");
-                /* background-image: url("./public/img/portada-all-1.png"); */
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .6)), url("<?= PATH_PUBLIC ?>/img/web/banner_infra.jpg");
+                /* background-image: url("<?= PATH_PUBLIC ?>/img/portada-all-1.png"); */
                 background-size: 150%;
                 /*   background-position: center; */
                 background-repeat: no-repeat;
@@ -289,10 +289,10 @@
                     <div class="margin-infra">
                         <div class="sedes_content_slider owl-carousel owl-theme">
                             <div class="sedes_slider">
-                                <img src="./public/img/web/inter1.jpg" alt="Imagen 1">
+                                <img src="<?= PATH_PUBLIC ?>/img/web/inter1.jpg" alt="Imagen 1">
                             </div>
                             <div class="sedes_slider">
-                                <img src="./public/img/web/inter2.jpg" alt="Imagen 2">
+                                <img src="<?= PATH_PUBLIC ?>/img/web/inter2.jpg" alt="Imagen 2">
                             </div>
                         </div>
                     </div>
@@ -308,10 +308,10 @@
                     <div class="margin-infra">
                         <div class="sedes_content_slider owl-carousel owl-theme">
                             <div class="sedes_slider">
-                                <img src="./public/img/web/guerreros1.jpg" alt="Imagen 1">
+                                <img src="<?= PATH_PUBLIC ?>/img/web/guerreros1.jpg" alt="Imagen 1">
                             </div>
                             <div class="sedes_slider">
-                                <img src="./public/img/web/guerreros2.jpg" alt="Imagen 2">
+                                <img src="<?= PATH_PUBLIC ?>/img/web/guerreros2.jpg" alt="Imagen 2">
                             </div>
                         </div>
                     </div>
@@ -342,10 +342,10 @@
                     <div class="margin-infra">
                         <div class="sedes_content_slider owl-carousel owl-theme">
                             <div class="sedes_slider">
-                                <img src="./public/img/web/olimpiadas1.jpg" alt="Imagen 1">
+                                <img src="<?= PATH_PUBLIC ?>/img/web/olimpiadas1.jpg" alt="Imagen 1">
                             </div>
                             <div class="sedes_slider">
-                                <img src="./public/img/web/olimpiadas2.jpg" alt="Imagen 2">
+                                <img src="<?= PATH_PUBLIC ?>/img/web/olimpiadas2.jpg" alt="Imagen 2">
                             </div>
                         </div>
                     </div>
@@ -359,10 +359,10 @@
                     <div class="margin-infra">
                         <div class="sedes_content_slider owl-carousel owl-theme">
                             <div class="sedes_slider">
-                                <img src="./public/img/web/danza1.jpg" alt="Imagen 1">
+                                <img src="<?= PATH_PUBLIC ?>/img/web/danza1.jpg" alt="Imagen 1">
                             </div>
                             <div class="sedes_slider">
-                                <img src="./public/img/web/danza1.jpg" alt="Imagen 2">
+                                <img src="<?= PATH_PUBLIC ?>/img/web/danza1.jpg" alt="Imagen 2">
                             </div>
                         </div>
                     </div>
@@ -393,10 +393,10 @@
                     <div class="margin-infra">
                         <div class="sedes_content_slider owl-carousel owl-theme">
                             <div class="sedes_slider">
-                                <img src="./public/img/web/eureka1.jpg" alt="Imagen 1">
+                                <img src="<?= PATH_PUBLIC ?>/img/web/eureka1.jpg" alt="Imagen 1">
                             </div>
                             <div class="sedes_slider">
-                                <img src="./public/img/web/eureka2.jpg" alt="Imagen 2">
+                                <img src="<?= PATH_PUBLIC ?>/img/web/eureka2.jpg" alt="Imagen 2">
                             </div>
                         </div>
                     </div>
@@ -410,10 +410,10 @@
                     <div class="margin-infra">
                         <div class="sedes_content_slider owl-carousel owl-theme">
                             <div class="sedes_slider">
-                                <img src="./public/img/web/gau1.jpg" alt="Imagen 1">
+                                <img src="<?= PATH_PUBLIC ?>/img/web/gau1.jpg" alt="Imagen 1">
                             </div>
                             <div class="sedes_slider">
-                                <img src="./public/img/web/gau2.jpg" alt="Imagen 2">
+                                <img src="<?= PATH_PUBLIC ?>/img/web/gau2.jpg" alt="Imagen 2">
                             </div>
                         </div>
                     </div>
@@ -447,10 +447,10 @@
                     <div class="margin-infra">
                         <div class="sedes_content_slider owl-carousel owl-theme">
                             <div class="sedes_slider">
-                                <img src="./public/img/web/desfile1.jpg" alt="Imagen 1">
+                                <img src="<?= PATH_PUBLIC ?>/img/web/desfile1.jpg" alt="Imagen 1">
                             </div>
                             <div class="sedes_slider">
-                                <img src="./public/img/web/desfile2.jpg" alt="Imagen 2">
+                                <img src="<?= PATH_PUBLIC ?>/img/web/desfile2.jpg" alt="Imagen 2">
                             </div>
                         </div>
                     </div>
@@ -462,7 +462,7 @@
         </div>
     </section>
 
-    <?php include './partials/footer.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>
     <!-- Modal para mostrar la foto ampliada -->
     <div class="modal fade" id="modalFoto" tabindex="-1" aria-labelledby="modalFotoLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -481,7 +481,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="<?= PATH_PUBLIC ?>/fonts/font-awesone/js/all.min.js"></script>
-    <script src="./public/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= PATH_PUBLIC ?>/js/bootstrap.bundle.min.js"></script>
     <script>
         $(document).ready(function() {
             $(".sedes_content_slider").owlCarousel({

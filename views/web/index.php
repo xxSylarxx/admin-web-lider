@@ -296,8 +296,8 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
 
 <body>
 
-    <?php include './partials/header.php'; ?>
-    <?php include './partials/redes.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
 
     <div class="container-fluid content-banner px-0">
         <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -590,7 +590,7 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
 
     </main>
 
-    <?php include './partials/footer.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>
 
     <script>
         //Para que fontaawesone no ponga svg por default y use la etiqueta i por default

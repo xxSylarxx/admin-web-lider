@@ -76,8 +76,8 @@
 </head>
 
 <body>
-    <?php include './partials/header.php'; ?>
-    <?php include './partials/redes.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
     <section class="container-fluid portada px-0">
         <div class="titleContainer">
             <div class="animate__animated animate__fadeInLeft">
@@ -127,7 +127,7 @@
                 </div>
             </div>
     </section>
-    <?php include './partials/footer.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>
     <script>
         window.FontAwesomeConfig = {
             autoReplaceSvg: false

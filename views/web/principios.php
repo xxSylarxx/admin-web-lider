@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Colegio Santo Domingo El Líder — Nivel Inicial</title>
-    <link rel="icon" href="./public/img/icons/escudo.png">
+    <link rel="icon" href="<?= PATH_PUBLIC ?>/img/icons/escudo.png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./public/css/web.css">
-    <link rel="stylesheet" href="./public/css/networks.css">
-    <link rel="stylesheet" href="./public/css/card-animation.css">
-    <link rel="stylesheet" href="./public/css/modal-contacto.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/web.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/networks.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/card-animation.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/modal-contacto.css">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/fonts/font-awesone/css/all.min.css">
     <!-- OwlCarousel CSS necesario para el carrusel -->
@@ -207,8 +207,8 @@
 </head>
 
 <body>
-    <?php include './partials/header.php'; ?>
-    <?php include './partials/redes.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
     <section class="container-fluid portada px-0">
         <div class="titleContainer">
             <div class="animate__animated animate__fadeInLeft">
@@ -217,7 +217,7 @@
                 </h2>
             </div>
         </div>
-        <img src="./public/img/portadas/portada_interna.png" alt="">
+        <img src="<?= PATH_PUBLIC ?>/img/portadas/portada_interna.png" alt="">
     </section>
     <!--   <section class="bienvenidos-section py-5">
         <div class="container py-4">
@@ -235,7 +235,7 @@
                         <div class="decoration-circle decoration-1"></div>
                         <div class="decoration-circle decoration-2"></div>
                         <div class="welcome-image2-card d-flex justify-content-center align-items-center">
-                            <img src="./public/img/web/portada_inicial.jpg" alt="Colegio Santo Domingo El Líder" class="welcome-image2">
+                            <img src="<?= PATH_PUBLIC ?>/img/web/portada_inicial.jpg" alt="Colegio Santo Domingo El Líder" class="welcome-image2">
                         </div>
                     </div>
                 </div>
@@ -289,27 +289,27 @@
                         <div class="owl-carousel owl-theme">
                             <div class="blog_item">
                                 <div class="blog_image">
-                                    <img class="img-fluid border" src="./public/img/web/infra_inicial1.jpg" onclick="showFoto(0);">
+                                    <img class="img-fluid border" src="<?= PATH_PUBLIC ?>/img/web/infra_inicial1.jpg" onclick="showFoto(0);">
                                 </div>
                             </div>
                             <div class="blog_item">
                                 <div class="blog_image">
-                                    <img class="img-fluid border" src="./public/img/web/infra_inicial2.jpg" onclick="showFoto(1);">
+                                    <img class="img-fluid border" src="<?= PATH_PUBLIC ?>/img/web/infra_inicial2.jpg" onclick="showFoto(1);">
                                 </div>
                             </div>
                             <div class="blog_item">
                                 <div class="blog_image">
-                                    <img class="img-fluid border" src="./public/img/web/infra_inicial3.jpg" onclick="showFoto(2);">
+                                    <img class="img-fluid border" src="<?= PATH_PUBLIC ?>/img/web/infra_inicial3.jpg" onclick="showFoto(2);">
                                 </div>
                             </div>
                             <div class="blog_item">
                                 <div class="blog_image">
-                                    <img class="img-fluid border" src="./public/img/galeria/fachada.jpeg" onclick="showFoto(3);">
+                                    <img class="img-fluid border" src="<?= PATH_PUBLIC ?>/img/galeria/fachada.jpeg" onclick="showFoto(3);">
                                 </div>
                             </div>
                             <div class="blog_item">
                                 <div class="blog_image">
-                                    <img class="img-fluid border" src="./public/img/web/grass.jpg" onclick="showFoto(4);">
+                                    <img class="img-fluid border" src="<?= PATH_PUBLIC ?>/img/web/grass.jpg" onclick="showFoto(4);">
                                 </div>
                             </div>
                         </div>
@@ -334,7 +334,7 @@
                         <div class="card-body d-flex">
                             <div class="row d-flex justify-content-center">
                                 <div class="col-lg-3 my-auto d-flex justify-content-center py-3">
-                                    <img src="./public/img/icons/icon-desarrollo.png" class="mr-3">
+                                    <img src="<?= PATH_PUBLIC ?>/img/icons/icon-desarrollo.png" class="mr-3">
                                 </div>
                                 <div class="col-lg-7 my-auto">
                                     <h4 style="color:var(--color1);font-weight:bold;">DESARROLLO INTEGRAL</h4>
@@ -350,7 +350,7 @@
                         <div class="card-body d-flex">
                             <div class="row d-flex justify-content-center">
                                 <div class="col-lg-3 my-auto d-flex justify-content-center py-3">
-                                    <img src="./public/img/icons/icon-juego.png" class="mr-3">
+                                    <img src="<?= PATH_PUBLIC ?>/img/icons/icon-juego.png" class="mr-3">
                                 </div>
                                 <div class="col-lg-7 my-auto">
                                     <h4 style="color:var(--color1);font-weight:bold;">APRENDIZAJE A TRAVÉS DEL JUEGO</h4>
@@ -365,7 +365,7 @@
                         <div class="card-body d-flex h-100">
                             <div class="row d-flex justify-content-center">
                                 <div class="col-lg-3 my-auto d-flex justify-content-center py-3">
-                                    <img src="./public/img/icons/icon-valores.png" class="mr-3">
+                                    <img src="<?= PATH_PUBLIC ?>/img/icons/icon-valores.png" class="mr-3">
                                 </div>
                                 <div class="col-lg-7 my-auto">
                                     <h4 style="color: var(--color1);font-weight:bold;">FORMACIÓN EN VALORES</h4>
@@ -380,7 +380,7 @@
                         <div class="card-body d-flex">
                             <div class="row d-flex justify-content-center">
                                 <div class="col-lg-3 my-auto d-flex justify-content-center py-3">
-                                    <img src="./public/img/icons/icon-estimulante.png" class="mr-3">
+                                    <img src="<?= PATH_PUBLIC ?>/img/icons/icon-estimulante.png" class="mr-3">
                                 </div>
                                 <div class="col-lg-7 my-auto">
                                     <h4 style="color: var(--color1);font-weight:bold;">ENTORNO SEGURO Y ESTIMULANTE</h4>
@@ -395,7 +395,7 @@
                         <div class="card-body d-flex">
                             <div class="row d-flex justify-content-center">
                                 <div class="col-lg-3 my-auto d-flex justify-content-center py-3">
-                                    <img src="./public/img/icons/icon-docentes.png" class="mr-3">
+                                    <img src="<?= PATH_PUBLIC ?>/img/icons/icon-docentes.png" class="mr-3">
                                 </div>
                                 <div class="col-lg-7 my-auto">
                                     <h4 style="color: var(--color1);font-weight:bold;">DOCENTES ESPECIALIZADAS</h4>
@@ -514,7 +514,7 @@
             </div>
         </div>
     </section>
-    <?php include './partials/footer.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>
     <!-- Modal para mostrar la foto ampliada -->
     <div class="modal fade" id="modalFoto" tabindex="-1" aria-labelledby="modalFotoLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -531,7 +531,7 @@
         };
     </script>
     <script src="<?= PATH_PUBLIC ?>/fonts/font-awesone/js/all.min.js"></script>
-    <script src="./public/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= PATH_PUBLIC ?>/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
@@ -560,11 +560,11 @@
         // Función para mostrar la foto en el modal
         function showFoto(item) {
             let list = [
-                './public/img/web/infra_inicial1.jpg',
-                './public/img/web/infra_inicial2.jpg',
-                './public/img/web/infra_inicial3.jpg',
-                './public/img/galeria/fachada.jpeg',
-                './public/img/web/grass.jpg'
+                '<?= PATH_PUBLIC ?>/img/web/infra_inicial1.jpg',
+                '<?= PATH_PUBLIC ?>/img/web/infra_inicial2.jpg',
+                '<?= PATH_PUBLIC ?>/img/web/infra_inicial3.jpg',
+                '<?= PATH_PUBLIC ?>/img/galeria/fachada.jpeg',
+                '<?= PATH_PUBLIC ?>/img/web/grass.jpg'
             ];
             $('#fotoview').attr('src', list[item]);
             $('#modalFoto').modal('show');

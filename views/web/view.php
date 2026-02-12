@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Colegio Santo Domingo El Líder</title>
-    <link rel="icon" href="./public/img/icons/escudo.png">
+    <link rel="icon" href="<?= PATH_PUBLIC ?>/img/icons/escudo.png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./public/css/web.css">
-    <link rel="stylesheet" href="./public/css/networks.css">
-    <link rel="stylesheet" href="./public/css/modal-contacto.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/web.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/networks.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/modal-contacto.css">
     <!-- Font Awesome CSS -->
    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/fonts/font-awesone/css/all.min.css">
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/fonts/font-awesone/css/brands.min.css">
@@ -127,7 +127,7 @@
                 </h2>
             </div>
         </div>
-        <img src="./public/img/web/inicial-portada.jpg" alt="">
+        <img src="<?= PATH_PUBLIC ?>/img/web/inicial-portada.jpg" alt="">
     </section> -->
 
 
@@ -170,7 +170,7 @@
     <script src=".<?= PATH_PUBLIC ?>/fonts/font-awesone/js/all.min.js"></script>
     <script src=".<?= PATH_PUBLIC ?>/fonts/font-awesone/js/brands.min.js"></script>
     <script src=".<?= PATH_PUBLIC ?>/fonts/font-awesone/js/solid.min.js"></script>
-    <script src="./public/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= PATH_PUBLIC ?>/js/bootstrap.bundle.min.js"></script>
 </body>
 
 

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Colegio Santo Domingo El Líder — Valores</title>
-    <link rel="icon" href="./public/img/icons/escudo.png">
+    <link rel="icon" href="<?= PATH_PUBLIC ?>/img/icons/escudo.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,12 +15,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./public/css/web.css">
-    <link rel="stylesheet" href="./public/css/networks.css">
-    <link rel="stylesheet" href="./public/css/card-animation.css">
-    <link rel="stylesheet" href="./public/css/modal-contacto.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/web.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/networks.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/card-animation.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/modal-contacto.css">
 
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/fonts/font-awesone/css/all.min.css">
@@ -114,8 +114,8 @@
 </head>
 
 <body>
-    <?php include './partials/header.php'; ?>
-    <?php include './partials/redes.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
 
     <!-- Main content -->
     <section class="container-fluid portada px-0">
@@ -126,7 +126,7 @@
                 </h2>
             </div>
         </div>
-        <img src="./public/img/portadas/portada_interna.png" alt="">
+        <img src="<?= PATH_PUBLIC ?>/img/portadas/portada_interna.png" alt="">
     </section>
 
     <section id="valores" class="py-5">
@@ -144,7 +144,7 @@
                 <div class="col-lg-4 pt-5 px-5">
                     <div class="d-flex justify-content-center">
                         <div class="content-icon" style="background-color: var(--color3);">
-                            <center><img src="./public/img/icons/respeto.png" alt=""></center>
+                            <center><img src="<?= PATH_PUBLIC ?>/img/icons/respeto.png" alt=""></center>
                         </div>
                     </div>
                     <h3>Responsabilidad</h3>
@@ -152,7 +152,7 @@
                 <div class="col-lg-4 pt-5 px-5">
                     <div class="d-flex justify-content-center">
                         <div class="content-icon" style="background-color: var(--color3);">
-                            <center><img src="./public/img/icons/responsabilidad.png" alt=""></center>
+                            <center><img src="<?= PATH_PUBLIC ?>/img/icons/responsabilidad.png" alt=""></center>
                         </div>
                     </div>
                     <h3>Respeto</h3>
@@ -160,7 +160,7 @@
                 <div class="col-lg-4 pt-5 px-5">
                     <div class="d-flex justify-content-center">
                         <div class="content-icon" style="background-color: var(--color3);">
-                            <center><img src="./public/img/icons/solidaridad.png" alt=""></center>
+                            <center><img src="<?= PATH_PUBLIC ?>/img/icons/solidaridad.png" alt=""></center>
                         </div>
                     </div>
                     <h3>Resiliencia</h3>
@@ -168,7 +168,7 @@
                 <div class="col-lg-4 pt-5 px-5">
                     <div class="d-flex justify-content-center">
                         <div class="content-icon" style="background-color: var(--color3);">
-                            <center><img src="./public/img/icons/honestidad.png" alt=""></center>
+                            <center><img src="<?= PATH_PUBLIC ?>/img/icons/honestidad.png" alt=""></center>
                         </div>
                     </div>
                     <h3>Solidaridad</h3>
@@ -176,7 +176,7 @@
                 <div class="col-lg-4 pt-5 px-5">
                     <div class="d-flex justify-content-center">
                         <div class="content-icon" style="background-color: var(--color3);">
-                            <center><img src="./public/img/icons/tolerancia.png" alt=""></center>
+                            <center><img src="<?= PATH_PUBLIC ?>/img/icons/tolerancia.png" alt=""></center>
                         </div>
                     </div>
                     <h3>Liderazgo</h3>
@@ -293,7 +293,7 @@
         </div>
     </section>
 
-    <?php include './partials/footer.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>
 
     <script>
         // Prevent FontAwesome from using SVG by default
@@ -304,7 +304,7 @@
 
     <!-- Font Awesome JS -->
     <script src="<?= PATH_PUBLIC ?>/fonts/font-awesone/js/all.min.js"></script>
-    <script src="./public/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= PATH_PUBLIC ?>/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

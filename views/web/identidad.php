@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Colegio Santo Domingo El Líder — Nosotros</title>
-    <link rel="icon" href="./public/img/icons/escudo.png">
+    <link rel="icon" href="<?= PATH_PUBLIC ?>/img/icons/escudo.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,12 +15,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./public/css/web.css">
-    <link rel="stylesheet" href="./public/css/networks.css">
-    <link rel="stylesheet" href="./public/css/card-animation.css">
-    <link rel="stylesheet" href="./public/css/modal-contacto.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/web.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/networks.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/card-animation.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/modal-contacto.css">
 
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/fonts/font-awesone/css/all.min.css">
@@ -186,8 +186,8 @@
 </head>
 
 <body>
-    <?php include './partials/header.php'; ?>
-    <?php include './partials/redes.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
 
     <!-- Main content will be added here -->
     <!-- Bienvenida Section -->
@@ -199,7 +199,7 @@
                 </h2>
             </div>
         </div>
-        <img src="./public/img/portadas/portada_interna.png" alt="">
+        <img src="<?= PATH_PUBLIC ?>/img/portadas/portada_interna.png" alt="">
     </section>
     <section id="presentacion-identidad" style="padding-top:4rem;">
         <div class="container">
@@ -230,7 +230,7 @@
                 <div class="col-lg-5 px-5">
                     <div class="d-flex justify-content-center">
                         <div class="content-icon" style="background-color: var(--color2);">
-                            <center><img src="https://www.cristosalvador.edu.pe/public/img/icons/vision.png" alt=""></center>
+                            <center><img src="<?= PATH_PUBLIC ?>/img/icons/vision.png" alt=""></center>
                         </div>
                     </div>
                     <h3>Visión</h3>
@@ -240,7 +240,7 @@
                 <div class="col-lg-5 px-5">
                     <div class="d-flex justify-content-center">
                         <div class="content-icon" style="background-color: var(--color2);">
-                            <center><img src="https://www.cristosalvador.edu.pe/public/img/icons/mision.png" alt=""></center>
+                            <center><img src="<?= PATH_PUBLIC ?>/img/icons/mision.png" alt=""></center>
                         </div>
                     </div>
                     <h3>Misión</h3>
@@ -251,7 +251,7 @@
         </div>
     </section>
 
-    <?php include './partials/footer.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>
 
     <script>
         // Prevent FontAwesome from using SVG by default
@@ -262,7 +262,7 @@
 
     <!-- Font Awesome JS -->
     <script src="<?= PATH_PUBLIC ?>/fonts/font-awesone/js/all.min.js"></script>
-    <script src="./public/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= PATH_PUBLIC ?>/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
