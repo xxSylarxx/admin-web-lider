@@ -86,11 +86,11 @@
                     <label><?= $this->translate('Nombre de la institución') ?>:</label>
                     <input type="text" class="form-control mt-1" name="nombre" value="<?php echo $this->empresa['nombre'] ?>" required>
                 </div>
-                <div class="col-sm-4 my-2">
+                <div class="col-sm-4 my-2" hidden>
                     <label><?= $this->translate('Teléfono') ?>:</label>
                     <input type="text" class="form-control mt-1" name="telefono" value="<?php echo $this->empresa['telefono'] ?>">
                 </div>
-                <div class="col-sm-4 my-2">
+                <div class="col-sm-4 my-2" hidden>
                     <label><?= $this->translate('Célular') ?>:</label>
                     <input type="text" class="form-control mt-1" name="celular" value="<?php echo $this->empresa['celular'] ?>">
                 </div>
@@ -98,7 +98,7 @@
                     <label><?= $this->translate('Dirección') ?> 01:</label>
                     <input type="text" class="form-control mt-1" name="direccion" value="<?php echo $this->empresa['direccion'] ?>">
                 </div>
-                <div class="col-sm-4 my-2">
+                <div class="col-sm-4 my-2" hidden>
                     <label><?= $this->translate('Dirección') ?> 02:</label>
                     <input type="text" class="form-control mt-1" name="direccion2" value="<?php echo $this->empresa['direccion2'] ?>">
                 </div>
@@ -106,7 +106,7 @@
                     <label><?= $this->translate('Correo') ?> 01:</label>
                     <input type="email" class="form-control mt-1" name="correo1" value="<?php echo $this->empresa['correo1'] ?>">
                 </div>
-                <div class="col-sm-4 my-2">
+                <div class="col-sm-4 my-2" hidden>
                     <label><?= $this->translate('Correo') ?> 02:</label>
                     <input type="email" class="form-control mt-1" name="correo2" value="<?php echo $this->empresa['correo2'] ?>">
                 </div>
@@ -129,7 +129,7 @@
                     <label>Youtube:</label>
                     <input type="text" class="form-control mt-1" name="youtube" value="<?php echo $this->empresa['youtube'] ?>">
                 </div>
-                <div class="col-sm-4 my-2">
+                <div class="col-sm-4 my-2" hidden>
                     <label>Twitter:</label>
                     <input type="text" class="form-control mt-1" name="twitter" value="<?php echo $this->empresa['twitter'] ?>">
                 </div>
@@ -137,11 +137,11 @@
                     <label>Whatsapp 01:</label>
                     <input type="text" class="form-control mt-1" name="whatsapp1" value="<?php echo $this->empresa['whatsapp1'] ?>">
                 </div>
-                <div class="col-sm-4 my-2">
+                <div class="col-sm-4 my-2" hidden>
                     <label>Whatsapp 02:</label>
                     <input type="text" class="form-control mt-1" name="whatsapp2" value="<?php echo $this->empresa['whatsapp2'] ?>">
                 </div>
-                <div class="col-sm-4 my-2">
+                <div class="col-sm-4 my-2" hidden>
                     <label>Linkedin:</label>
                     <input type="text" class="form-control mt-1" name="linkedin" value="<?php echo $this->empresa['linkedin'] ?>">
                 </div>
@@ -154,8 +154,8 @@
                     <input type="text" class="form-control mt-1" name="intranet" value="<?php echo $this->empresa['intranet'] ?>">
                 </div>
             </div>
-            <h5 class="linea mt-4 mb-2"><span><?= $this->translate('Libro de reclamaciones') ?></span></h5>
-            <div class="row px-2">
+            <h5 class="linea mt-4 mb-2" hidden><span><?= $this->translate('Libro de reclamaciones') ?></span></h5>
+            <div class="row px-2" hidden>
                 <div class="col-sm-4 my-2">
                     <label><?= $this->translate('Link del formulario') ?>:</label>
                     <input type="text" class="form-control mt-1" name="liblink" value="<?php echo $this->empresa['liblink'] ?>">

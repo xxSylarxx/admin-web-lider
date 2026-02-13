@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3307
--- Tiempo de generación: 11-02-2026 a las 22:58:32
--- Versión del servidor: 11.5.2-MariaDB
+-- Tiempo de generación: 13-02-2026 a las 11:32:47
+-- Versión del servidor: 5.5.62-MariaDB
 -- Versión de PHP: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `admision`;
 CREATE TABLE IF NOT EXISTS `admision` (
-  `idadmision` int(11) NOT NULL DEFAULT 1,
+  `idadmision` int(11) NOT NULL DEFAULT '1',
   `titulo` varchar(255) DEFAULT NULL,
-  `cuerpo` longtext DEFAULT NULL,
+  `cuerpo` longtext,
   PRIMARY KEY (`idadmision`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `admision`
@@ -52,12 +52,12 @@ DROP TABLE IF EXISTS `banner`;
 CREATE TABLE IF NOT EXISTS `banner` (
   `id` int(11) NOT NULL COMMENT 'TRIAL',
   `tipo` varchar(10) NOT NULL COMMENT 'TRIAL',
-  `cuerpo` mediumtext DEFAULT NULL COMMENT 'TRIAL',
+  `cuerpo` mediumtext COMMENT 'TRIAL',
   `opciones` varchar(255) NOT NULL COMMENT 'TRIAL',
   `estado` varchar(1) DEFAULT NULL,
   `trial646` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='TRIAL';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `banner`
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `categorias` (
   `trial652` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`idcatg`),
   UNIQUE KEY `idx_nombre` (`nombre`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='TRIAL';
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `categorias`
@@ -103,8 +103,8 @@ INSERT INTO `categorias` (`idcatg`, `nombre`, `filtro`, `catpad`, `fecreg`, `est
 DROP TABLE IF EXISTS `categorias_galerias`;
 CREATE TABLE IF NOT EXISTS `categorias_galerias` (
   `idcatg` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(100) NOT NULL,
-  `estado` char(1) NOT NULL DEFAULT 'A' COMMENT 'A=Activo, I=Inactivo',
+  `nombre` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `estado` char(1) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'A' COMMENT 'A=Activo, I=Inactivo',
   `fecreg` datetime NOT NULL,
   PRIMARY KEY (`idcatg`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -152,14 +152,14 @@ CREATE TABLE IF NOT EXISTS `empresa` (
   `trial652` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`idemp`),
   UNIQUE KEY `idx_nombre` (`nombre`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='TRIAL';
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `empresa`
 --
 
 INSERT INTO `empresa` (`idemp`, `nombre`, `telefono`, `celular`, `direccion`, `direccion2`, `correo1`, `correo2`, `anio_admision`, `facebook`, `whatsapp1`, `whatsapp2`, `instagram`, `youtube`, `twitter`, `linkedin`, `tiktok`, `intranet`, `liblink`, `libmail`, `libnume`, `metades`, `trial652`) VALUES
-(1, 'Colegio Santo Domingo El Líder', '1111', '111', '', '', '', '', 2026, '111', '111', '', '11', '', '', '', '', '1', '', '', NULL, 'Colegio Santo Domingo El Líder en Carabayllo, Lima: educación integral y personalizada desde primaria hasta secundaria. Programas académicos, actividades extracurriculares, admisiones.', 'T');
+(1, 'Colegio Santo Domingo El Líder', '1111', '111', 'Mz. N lote 4 Urbanización Los Ficus de Carabayllo, 5ta Etapa carabayllo', '', 'admision@lidersd.edu.pe', '', 2026, 'https://www.facebook.com/santodomingolider', '+51951352404', '', 'https://www.instagram.com/santodomingolider', 'https://www.youtube.com/@santodomingolider', '', '', 'https://www.tiktok.com/@santodomingolider', 'https://lidersd.cubicol.pe/principal/login', '', '', NULL, 'Colegio Santo Domingo El Líder en Carabayllo, Lima: educación integral y personalizada desde primaria hasta secundaria. Programas académicos, actividades extracurriculares, admisiones.', 'T');
 
 -- --------------------------------------------------------
 
@@ -174,7 +174,7 @@ CREATE TABLE IF NOT EXISTS `galeria` (
   `titulo` varchar(150) NOT NULL COMMENT 'TRIAL',
   `detalle` varchar(270) DEFAULT NULL COMMENT 'TRIAL',
   `ncolum` int(11) DEFAULT NULL COMMENT 'TRIAL',
-  `cuerpo` mediumtext DEFAULT NULL COMMENT 'TRIAL',
+  `cuerpo` mediumtext COMMENT 'TRIAL',
   `modo` char(1) DEFAULT 'A' COMMENT 'TRIAL',
   `portada` varchar(300) DEFAULT NULL COMMENT 'TRIAL',
   `fecreg` datetime DEFAULT NULL COMMENT 'TRIAL',
@@ -182,15 +182,14 @@ CREATE TABLE IF NOT EXISTS `galeria` (
   `trial656` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`idgaleria`),
   KEY `fk_galeria_categoria` (`idcatg`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='TRIAL';
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `galeria`
 --
 
 INSERT INTO `galeria` (`idgaleria`, `idcatg`, `titulo`, `detalle`, `ncolum`, `cuerpo`, `modo`, `portada`, `fecreg`, `visible`, `trial656`) VALUES
-(13, 1, 'FIESTAS PATRIAS', 'asdsadasda', 1, '[{\"id\":65198,\"tipo\":\"I\",\"content\":\"/public/img/galeria/tpm.png\",\"portada\":\"/public/img/galeria/tpm.png\"}]', 'A', 'http://admin-web-lidersd.com/public/img/galeria/emergent.jpg', '2025-06-18 16:21:14', 'S', NULL),
-(19, 3, 'DEMO2', 'OTRO DETALLE', 4, '[{\"id\":18907,\"tipo\":\"I\",\"content\":\"/public/img/galeria/admision.jpg\",\"portada\":\"/public/img/galeria/admision.jpg\"},{\"id\":96749,\"tipo\":\"I\",\"content\":\"/public/img/galeria/emergent.jpg\",\"portada\":\"/public/img/galeria/emergent.jpg\"},{\"id\":55081,\"tipo\":\"I\",\"content\":\"/public/img/galeria/ticket_122611_250124114142.jpg\",\"portada\":\"/public/img/galeria/ticket_122611_250124114142.jpg\"},{\"id\":95999,\"tipo\":\"I\",\"content\":\"/public/img/galeria/03.jpg\",\"portada\":\"/public/img/galeria/03.jpg\"},{\"id\":97965,\"tipo\":\"I\",\"content\":\"/public/img/galeria/04.jpg\",\"portada\":\"/public/img/galeria/04.jpg\"},{\"id\":71558,\"tipo\":\"I\",\"content\":\"/public/img/galeria/06.jpg\",\"portada\":\"/public/img/galeria/06.jpg\"},{\"id\":28873,\"tipo\":\"I\",\"content\":\"/public/img/galeria/05.jpg\",\"portada\":\"/public/img/galeria/05.jpg\"},{\"id\":23289,\"tipo\":\"I\",\"content\":\"/public/img/galeria/07.jpg\",\"portada\":\"/public/img/galeria/07.jpg\"}]', 'A', 'http://admin-web-lidersd.com/public/img/galeria/01.jpg', '2026-01-21 17:47:56', 'S', NULL);
+(20, 2, 'Inicio de ejemplo', '', 2, '[{\"id\":81641,\"tipo\":\"I\",\"content\":\"/public/img/galeria/fachada.jpeg\",\"portada\":\"/public/img/galeria/fachada.jpeg\"},{\"id\":37735,\"tipo\":\"I\",\"content\":\"/public/img/galeria/p-boletin.jpg\",\"portada\":\"/public/img/galeria/p-boletin.jpg\"}]', 'A', 'http://admin-web-lidersd.com/public/img/galeria/p-boletin.jpg', '2026-02-13 06:08:10', 'S', NULL);
 
 -- --------------------------------------------------------
 
@@ -203,7 +202,7 @@ CREATE TABLE IF NOT EXISTS `popup` (
   `id` int(11) NOT NULL COMMENT 'TRIAL',
   `titulo` varchar(250) DEFAULT NULL COMMENT 'TRIAL',
   `tipo` char(1) NOT NULL COMMENT 'TRIAL',
-  `cuerpo` mediumtext DEFAULT NULL COMMENT 'TRIAL',
+  `cuerpo` mediumtext COMMENT 'TRIAL',
   `header` char(1) DEFAULT NULL COMMENT 'TRIAL',
   `margen` char(1) DEFAULT NULL COMMENT 'TRIAL',
   `slider` char(1) DEFAULT NULL COMMENT 'TRIAL',
@@ -211,7 +210,7 @@ CREATE TABLE IF NOT EXISTS `popup` (
   `visible` char(1) DEFAULT NULL COMMENT 'TRIAL',
   `trial656` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='TRIAL';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `popup`
@@ -235,21 +234,28 @@ CREATE TABLE IF NOT EXISTS `portadas` (
   `titulo` varchar(200) DEFAULT NULL COMMENT 'Título de portada',
   `subtitulo` varchar(250) DEFAULT NULL COMMENT 'Subtítulo',
   `estado` char(1) DEFAULT 'A' COMMENT 'A=Activo, I=Inactivo',
-  `fecreg` timestamp NULL DEFAULT current_timestamp(),
+  `fecreg` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `fecact` datetime DEFAULT NULL,
   PRIMARY KEY (`idportada`),
   UNIQUE KEY `idx_pagina` (`pagina`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `portadas`
 --
 
 INSERT INTO `portadas` (`idportada`, `pagina`, `nombre`, `imagen`, `titulo`, `subtitulo`, `estado`, `fecreg`, `fecact`) VALUES
-(1, 'nosotros', 'Nosotros', 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200', 'Nosotros', 'Conoce más sobre nuestra institución', 'A', '2026-01-14 21:21:14', '2026-01-21 09:14:57'),
-(2, 'servicios', 'Servicios', 'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200', 'Nuestros Servicios', 'Soluciones profesionales adaptadas a tus necesidades', 'A', '2026-01-14 21:21:14', '2026-01-16 16:33:49'),
-(3, 'admision', 'Admision', '/public/img/portadas/admision.jpg', 'Admisión 2027', 'Conocerás los requisitos de nuestro proceso de Admisión 2027', 'A', '2026-01-14 21:21:14', '2026-01-21 11:49:02'),
-(6, 'galerias', 'Galerías', '/public/img/portadas/admision.jpg', 'GALERÍAS', 'Revive nuestros mejores momentos', 'A', '2026-01-19 15:11:54', '2026-01-19 12:22:56');
+(1, 'historia', 'Historia', '/public/img/portadas/portada_interna.png', 'Reseña Histórica', '', 'A', '2026-01-14 21:21:14', '2026-01-21 09:14:57'),
+(2, 'identidad', 'Identidad', '/public/img/portadas/portada_interna.png', 'Nuestra Identidad', '', 'A', '2026-01-14 21:21:14', '2026-01-16 16:33:49'),
+(5, 'principios', 'Nuestros Principios', '/public/img/portadas/portada_interna.png', 'Propuesta Educativa', NULL, 'A', '2026-02-13 11:17:51', NULL),
+(3, 'metodologia', 'Metodología', '/public/img/portadas/portada_interna.png', 'Metodología', '', 'A', '2026-01-14 21:21:14', '2026-01-21 11:49:02'),
+(4, 'valores', 'Nuestros Valores', '/public/img/portadas/portada_interna.png', 'Nuestros Valores', '', 'A', '2026-01-19 15:11:54', '2026-01-19 12:22:56'),
+(6, 'inicial', 'Nivel Inicial', '/public/img/portadas/portada_interna.png', 'Nivel Inicial', NULL, 'A', '2026-02-13 11:18:45', NULL),
+(7, 'primaria', 'Nivel Primaria', '/public/img/portadas/portada_interna.png', 'Nivel Primaria', NULL, 'A', '2026-02-13 11:19:09', NULL),
+(8, 'secundaria', 'Nivel Secundaria', '/public/img/portadas/portada_interna.png', 'Nivel Secundaria', NULL, 'A', '2026-02-13 11:19:30', NULL),
+(9, 'comunicados', 'Comunicados', '/public/img/portadas/portada_interna.png', 'Publicaciones', NULL, 'A', '2026-02-13 11:19:56', NULL),
+(10, 'galeria', 'Galerías', '/public/img/portadas/portada_interna.png', 'Galerías', NULL, 'A', '2026-02-13 11:21:21', NULL),
+(11, 'admision', 'Admisión', '/public/img/portadas/portada_interna.png', 'Admisión', '', 'A', '2026-02-13 11:21:45', NULL);
 
 -- --------------------------------------------------------
 
@@ -265,13 +271,13 @@ CREATE TABLE IF NOT EXISTS `publicacion` (
   `tagname` varchar(330) NOT NULL COMMENT 'TRIAL',
   `portada` varchar(350) DEFAULT NULL COMMENT 'TRIAL',
   `detalle` varchar(250) DEFAULT NULL COMMENT 'TRIAL',
-  `cuerpo` longtext DEFAULT NULL COMMENT 'TRIAL',
+  `cuerpo` longtext COMMENT 'TRIAL',
   `fecpub` datetime NOT NULL COMMENT 'TRIAL',
   `fecreg` datetime DEFAULT NULL COMMENT 'TRIAL',
   `visible` char(1) DEFAULT 'N' COMMENT 'TRIAL',
   `trial656` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`idpub`)
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='TRIAL';
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `publicacion`
@@ -291,18 +297,18 @@ INSERT INTO `publicacion` (`idpub`, `idcatg`, `titulo`, `tagname`, `portada`, `d
 DROP TABLE IF EXISTS `suscripciones`;
 CREATE TABLE IF NOT EXISTS `suscripciones` (
   `idsuscripcion` int(11) NOT NULL AUTO_INCREMENT,
-  `nombres` varchar(50) DEFAULT NULL,
-  `apellidos` varchar(50) DEFAULT NULL,
-  `correo` varchar(100) DEFAULT NULL,
-  `nivel` varchar(20) DEFAULT NULL,
-  `grado` varchar(10) DEFAULT NULL,
-  `consulta` text DEFAULT NULL,
-  `asunto` varchar(50) DEFAULT 'informes',
-  `nombre_completo` varchar(100) DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL,
-  `fecha_suscripcion` timestamp NULL DEFAULT current_timestamp(),
-  `estado` enum('activo','inactivo') NOT NULL DEFAULT 'activo',
-  `ip_registro` varchar(45) DEFAULT NULL,
+  `nombres` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `apellidos` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `correo` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nivel` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `grado` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `consulta` text COLLATE utf8mb4_unicode_ci,
+  `asunto` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT 'informes',
+  `nombre_completo` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `fecha_suscripcion` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `estado` enum('activo','inactivo') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'activo',
+  `ip_registro` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `fecha_baja` datetime DEFAULT NULL,
   PRIMARY KEY (`idsuscripcion`),
   UNIQUE KEY `idx_correo_unique` (`correo`),
@@ -334,7 +340,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `trial656` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`iduser`),
   UNIQUE KEY `idx_nombre` (`nombre`)
-) ENGINE=MyISAM AUTO_INCREMENT=102 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='TRIAL';
+) ENGINE=MyISAM AUTO_INCREMENT=102 DEFAULT CHARSET=utf8mb4 COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `usuarios`

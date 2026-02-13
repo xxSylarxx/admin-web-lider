@@ -32,22 +32,22 @@
                 </span>
             </a>
         </li>
-        <li>
-            <a href="/admin/admision" class="<?php echo $this->view_name == 'admision' ? 'active' : '' ?>">
+        <!-- <li>
+            <a href="/admin/admision" class="<//?php echo $this->view_name == 'admision' ? 'active' : '' ?>">
                 <i class="fas fa-user-graduate"></i>
                 <span class="links_name">
-                    <?= $this->translate('Admisión') ?>
+                    <//?= $this->translate('Admisión') ?>
                 </span>
             </a>
-        </li>
-        <li>
-            <a href="/admin/suscripciones" class="<?php echo $this->view_name == 'suscripciones' ? 'active' : '' ?>">
+        </li> -->
+       <!--  <li>
+            <a href="/admin/suscripciones" class="<//?php echo $this->view_name == 'suscripciones' ? 'active' : '' ?>">
                 <i class="fas fa-envelope"></i>
                 <span class="links_name">
-                    <?= $this->translate('Suscripciones') ?>
+                    <//?= $this->translate('Suscripciones') ?>
                 </span>
             </a>
-        </li>
+        </li> -->
         <li>
             <a href="/admin/galerias" class="<?php echo $this->view_name == 'galerias' ? 'active' : '' ?>">
                 <i class="far fa-images"></i>
@@ -72,14 +72,14 @@
                 </span>
             </a>
         </li>
-        <li>
-            <a href="/admin/feed" class="<?php echo $this->view_name == 'feed' ? 'active' : '' ?>">
+        <!-- <li>
+            <a href="/admin/feed" class="<//?php echo $this->view_name == 'feed' ? 'active' : '' ?>">
                 <i class="fab fa-facebook"></i>
                 <span class="links_name">
                     Facebook Posts
                 </span>
             </a>
-        </li>
+        </li> -->
     </ul>
 </aside>
 
