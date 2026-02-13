@@ -23,7 +23,7 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title><?= mb_strtoupper($dataEmpresa['nombre'], 'UTF-8') ?></title>
+    <title>Colegio Santo Domingo El Líder — Inicio</title>
     <meta name="description" content="<?= $dataEmpresa['metades'] ?>">
     <meta name="keywords" content="colegio santo domingo, colegio carabayllo, colegio lima norte, escuela, educación, primaria, secundaria, admisiones, bachillerato, actividades extracurriculares">
     <link rel="canonical" href="https://lidersd.edu.pe/">

@@ -191,6 +191,7 @@
 
     <!-- Main content will be added here -->
     <!-- Bienvenida Section -->
+     
     <section class="container-fluid portada px-0">
         <div class="titleContainer">
             <div class="animate__animated animate__fadeInLeft">
@@ -199,7 +200,7 @@
                 </h2>
             </div>
         </div>
-        <img src="<?= PATH_PUBLIC ?>/img/portadas/portada_interna.png" alt="">
+        <img src="<?= $dataPortada['imagen'] ?>" alt="">
     </section>
     <section id="presentacion-identidad" style="padding-top:4rem;">
         <div class="container">
