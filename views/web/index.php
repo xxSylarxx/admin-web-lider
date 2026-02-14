@@ -68,6 +68,27 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
 
     <style>
         /* Estilos personalizados para controles del carousel */
+        div.content-banner .frame-responsive {
+            position: relative;
+            height: 0;
+            overflow: hidden;
+            padding-bottom: 56.2%;
+            /* margin-bottom: 20px; */
+        }
+
+        div.content-banner .frame-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: <?= $dataBanner['opciones']['dimensionar'] ? 'calc(100vh - 90px)' : '100%' ?>;
+        }
+
+        div.content-banner video {
+            width: 100%;
+            height: <?= $dataBanner['opciones']['dimensionar'] ? 'calc(100vh - 90px)' : '100%' ?>;
+        }
+
         #carouselExampleIndicators .carousel-controls-bottom {
             position: absolute;
             bottom: 30px;
@@ -298,44 +319,108 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
 
     <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
     <?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
+    <!-- admin - ventana emergente -->
+    <?php if ($dataModal['visible'] == 'S') : ?>
+        <style>
+            #modalAdmin div.responsive {
+                position: relative;
+                height: 0;
+                overflow: hidden;
+                padding-bottom: 56%;
+                margin-bottom: 20px;
+            }
 
+            #modalAdmin div.responsive iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <div class="modal" id="modalAdmin" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg-4 modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content animate__animated <?= $dataModal['animation'] ?>" style="<?= ($dataModal['margen'] == 'N' && $dataModal['header'] == 'N') ? 'background: transparent; border: none;' : null ?>">
+                    <?php if ($dataModal['header'] == 'S') { ?>
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title fw-bold"><?= $dataModal['titulo'] ?></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                    <?php } ?>
+                    <div class="modal-body <?= $dataModal['margen'] == 'N' ? 'p-0' : null ?>">
+                        <?= $dataModal['cuerpo'] ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Esperar a que la página y Bootstrap estén completamente cargados
+            window.addEventListener('load', function() {
+                // instancia y muestra la ventana
+                let modalAdmin = new bootstrap.Modal(document.getElementById('modalAdmin'));
+                modalAdmin.show();
+                // al cierre de la ventana eliminamos el contenido
+                let modalAdmin2 = document.getElementById('modalAdmin');
+                modalAdmin2.addEventListener('hide.bs.modal', function(event) {
+                    document.querySelector('.modal-body').remove();
+                });
+            });
+        </script>
+    <?php endif; ?>
     <div class="container-fluid content-banner px-0">
-        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-controls-bottom">
-                <button class="carousel-control-custom" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <i class="fas fa-arrow-left" style="font-size:1rem;color:var(--color1);"></i>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <?php
+        if ($dataBanner['tipo'] == 'slider') { ?>
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-controls-bottom">
+                    <button class="carousel-control-custom <?= $dataBanner['opciones']['flechas'] ? '' : 'd-none' ?>" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <i class="fas fa-arrow-left" style="font-size:1rem;color:var(--color1);"></i>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <?php if ($dataBanner['opciones']['indicadores']) { ?>
+                        <div class="carousel-indicators">
+                            <?php foreach ($dataBanner['cuerpo'] as $key => $val) : ?>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?= $key ?>" class="<?= $key == 0 ? 'active' : '' ?>" aria-current="true" aria-label="Slide 1"></button> <?php endforeach; ?>
+                        </div>
+                    <?php } ?>
+                    <button class="carousel-control-custom <?= $dataBanner['opciones']['flechas'] ? '' : 'd-none' ?>" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <i class="fas fa-arrow-right" style="font-size:1rem;color:var(--color1);"></i>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
 
-                <button class="carousel-control-custom" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <i class="fas fa-arrow-right" style="font-size:1rem;color:var(--color1);"></i>
+                <div class="carousel-inner">
+                    <?php
+                    foreach ($dataBanner['cuerpo'] as $key => $val) : ?>
+                        <div class="carousel-item <?= $key == 0 ? 'active' : '' ?>">
+                            <img src="<?= $val['imagen'] ?>" class="d-block w-100">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="<?= PATH_PUBLIC ?>/img/portadas/slider1.jpg" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="<?= PATH_PUBLIC ?>/img/portadas/slider2.jpg" class="d-block w-100">
-                </div>
-            </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+        <?php } else if ($dataBanner['tipo'] == 'video' && $dataBanner['opciones']['youtube'] == true) {
+            $src  = $dataBanner['cuerpo'] . '?rel=0&showinfo=0';
+            $src .= $dataBanner['opciones']['controls'] ? '&controls=1' : '&controls=0';
+            $src .= $dataBanner['opciones']['autoplay'] ? '&autoplay=1' : '&autoplay=0';
+            $src .= $dataBanner['opciones']['muted'] ? '&mute=1' : '&mute=0';
+        ?>
+            <div class="frame-responsive"><iframe src="<?= $src ?>" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <?php } else {
+            $target  = 'src="' . $dataBanner['cuerpo'] . '"';
+            $target .= $dataBanner['opciones']['controls'] ? ' controls ' : '';
+            $target .= $dataBanner['opciones']['autoplay'] ? ' autoplay ' : '';
+            $target .= $dataBanner['opciones']['muted'] ? ' muted' : '';
+        ?>
+            <video <?= $target ?> width="100%" style="display: block; <?= $dataBanner['opciones']['dimensionar'] ? 'object-fit: cover;' : null ?>;" loop></video>
+        <?php } ?>
     </div>
 
     <main id="main">
@@ -501,28 +586,28 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
                 <div class="row cards d-flex justify-content-center align-items-center" style="position:relative;">
                     <div class="decoration-circle decoration-1"></div>
                     <div class="decoration-circle decoration-2"></div>
-                     <?php foreach ($dataPublicaciones as $key => $pub) : ?>
-                    <div class="col-lg-4 pt-5">
-                        <div class="card-galeria card3">
-                            <div class="container-galeria">
-                                <img id="portada-galeria" src="<?= $pub['portada'] ?>" alt="galeria">
-                            </div>
-                            <div class="details">
-                                <div class="row d-flex">
-                                    <div class="col-8">
-                                        <div class="mx-3" style="display:flex;justify-content:center;flex-direction:column;">
-                                            <h3><?= $pub['titulo'] ?></h3>
-                                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p> -->
-                                            <a class="btn-pub" href="/pub/<?= $pub['tagname'] ?>">Ver Más</a>
+                    <?php foreach ($dataPublicaciones as $key => $pub) : ?>
+                        <div class="col-lg-4 pt-5">
+                            <div class="card-galeria card3">
+                                <div class="container-galeria">
+                                    <img id="portada-galeria" src="<?= $pub['portada'] ?>" alt="galeria">
+                                </div>
+                                <div class="details">
+                                    <div class="row d-flex">
+                                        <div class="col-8">
+                                            <div class="mx-3" style="display:flex;justify-content:center;flex-direction:column;">
+                                                <h3><?= $pub['titulo'] ?></h3>
+                                                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p> -->
+                                                <a class="btn-pub" href="/pub/<?= $pub['tagname'] ?>">Ver Más</a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-4 d-flex justify-content-end align-items-start">
-                                        <img class="d-block mx-4 escudo-badge" src="<?= PATH_PUBLIC ?>/img/icons/escudo.png" alt="">
+                                        <div class="col-4 d-flex justify-content-end align-items-start">
+                                            <img class="d-block mx-4 escudo-badge" src="<?= PATH_PUBLIC ?>/img/icons/escudo.png" alt="">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     <?php endforeach; ?>
                 </div>
             </div>

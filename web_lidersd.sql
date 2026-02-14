@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3307
--- Tiempo de generación: 14-02-2026 a las 12:05:30
--- Versión del servidor: 5.5.62-MariaDB
+-- Tiempo de generación: 14-02-2026 a las 16:58:18
+-- Versión del servidor: 11.5.2-MariaDB
 -- Versión de PHP: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `admision`;
 CREATE TABLE IF NOT EXISTS `admision` (
-  `idadmision` int(11) NOT NULL DEFAULT '1',
+  `idadmision` int(11) NOT NULL DEFAULT 1,
   `titulo` varchar(255) DEFAULT NULL,
-  `cuerpo` longtext,
+  `cuerpo` longtext DEFAULT NULL,
   PRIMARY KEY (`idadmision`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
 -- Volcado de datos para la tabla `admision`
@@ -52,12 +52,12 @@ DROP TABLE IF EXISTS `banner`;
 CREATE TABLE IF NOT EXISTS `banner` (
   `id` int(11) NOT NULL COMMENT 'TRIAL',
   `tipo` varchar(10) NOT NULL COMMENT 'TRIAL',
-  `cuerpo` mediumtext COMMENT 'TRIAL',
+  `cuerpo` mediumtext DEFAULT NULL COMMENT 'TRIAL',
   `opciones` varchar(255) NOT NULL COMMENT 'TRIAL',
   `estado` varchar(1) DEFAULT NULL,
   `trial646` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COMMENT='TRIAL';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `banner`
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `banner` (
 
 INSERT INTO `banner` (`id`, `tipo`, `cuerpo`, `opciones`, `estado`, `trial646`) VALUES
 (1, 'slider', '[{\"imagen\":\"http://admin-web-lidersd.com/public/img/banner/slider2.jpg\",\"enlace\":null,\"titulo\":null,\"detalle\":null},{\"imagen\":\"http://admin-web-lidersd.com/public/img/banner/slider1.jpg\",\"enlace\":null,\"titulo\":null,\"detalle\":null}]', '{\"fade\":true,\"dimensionar\":true,\"height\":\"100\",\"indicadores\":true,\"flechas\":true}', 'S', 'T'),
-(2, 'video', 'https://www.youtube.com/embed/aphaMYrGH1o', '{\"controls\":true,\"autoplay\":false,\"muted\":false,\"dimensionar\":false,\"youtube\":true}', 'N', 'T');
+(2, 'video', 'https://www.youtube.com/embed/4jRZfDcWnlg', '{\"controls\":true,\"autoplay\":true,\"muted\":true,\"dimensionar\":false,\"youtube\":true}', 'N', 'T');
 
 -- --------------------------------------------------------
 
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `categorias` (
   `trial652` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`idcatg`),
   UNIQUE KEY `idx_nombre` (`nombre`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COMMENT='TRIAL';
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `categorias`
@@ -103,8 +103,8 @@ INSERT INTO `categorias` (`idcatg`, `nombre`, `filtro`, `catpad`, `fecreg`, `est
 DROP TABLE IF EXISTS `categorias_galerias`;
 CREATE TABLE IF NOT EXISTS `categorias_galerias` (
   `idcatg` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `estado` char(1) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'A' COMMENT 'A=Activo, I=Inactivo',
+  `nombre` varchar(100) NOT NULL,
+  `estado` char(1) NOT NULL DEFAULT 'A' COMMENT 'A=Activo, I=Inactivo',
   `fecreg` datetime NOT NULL,
   PRIMARY KEY (`idcatg`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -149,7 +149,7 @@ CREATE TABLE IF NOT EXISTS `empresa` (
   `trial652` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`idemp`),
   UNIQUE KEY `idx_nombre` (`nombre`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='TRIAL';
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `empresa`
@@ -171,7 +171,7 @@ CREATE TABLE IF NOT EXISTS `galeria` (
   `titulo` varchar(150) NOT NULL COMMENT 'TRIAL',
   `detalle` varchar(270) DEFAULT NULL COMMENT 'TRIAL',
   `ncolum` int(11) DEFAULT NULL COMMENT 'TRIAL',
-  `cuerpo` mediumtext COMMENT 'TRIAL',
+  `cuerpo` mediumtext DEFAULT NULL COMMENT 'TRIAL',
   `modo` char(1) DEFAULT 'A' COMMENT 'TRIAL',
   `portada` varchar(300) DEFAULT NULL COMMENT 'TRIAL',
   `fecreg` datetime DEFAULT NULL COMMENT 'TRIAL',
@@ -179,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `galeria` (
   `trial656` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`idgaleria`),
   KEY `fk_galeria_categoria` (`idcatg`)
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COMMENT='TRIAL';
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `galeria`
@@ -199,7 +199,7 @@ CREATE TABLE IF NOT EXISTS `popup` (
   `id` int(11) NOT NULL COMMENT 'TRIAL',
   `titulo` varchar(250) DEFAULT NULL COMMENT 'TRIAL',
   `tipo` char(1) NOT NULL COMMENT 'TRIAL',
-  `cuerpo` mediumtext COMMENT 'TRIAL',
+  `cuerpo` mediumtext DEFAULT NULL COMMENT 'TRIAL',
   `header` char(1) DEFAULT NULL COMMENT 'TRIAL',
   `margen` char(1) DEFAULT NULL COMMENT 'TRIAL',
   `slider` char(1) DEFAULT NULL COMMENT 'TRIAL',
@@ -207,14 +207,14 @@ CREATE TABLE IF NOT EXISTS `popup` (
   `visible` char(1) DEFAULT NULL COMMENT 'TRIAL',
   `trial656` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COMMENT='TRIAL';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `popup`
 --
 
 INSERT INTO `popup` (`id`, `titulo`, `tipo`, `cuerpo`, `header`, `margen`, `slider`, `animation`, `visible`, `trial656`) VALUES
-(1, 'demo', 'V', '<video src=\"/public/video/1_VIDEO DE INICIO.mp4\" width=\"100%\" autoplay=\"\" muted=\"\" controls=\"\"></video>', 'N', 'N', 'N', 'animate__zoomIn', 'S', NULL);
+(1, 'demo', 'I', '<img src=\"/public/img/galeria/pop_up_01.jpg\" width=\"100%\">', 'N', 'N', 'N', 'animate__zoomIn', 'S', NULL);
 
 -- --------------------------------------------------------
 
@@ -231,11 +231,11 @@ CREATE TABLE IF NOT EXISTS `portadas` (
   `titulo` varchar(200) DEFAULT NULL COMMENT 'Título de portada',
   `subtitulo` varchar(250) DEFAULT NULL COMMENT 'Subtítulo',
   `estado` char(1) DEFAULT 'A' COMMENT 'A=Activo, I=Inactivo',
-  `fecreg` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `fecreg` timestamp NULL DEFAULT current_timestamp(),
   `fecact` datetime DEFAULT NULL,
   PRIMARY KEY (`idportada`),
   UNIQUE KEY `idx_pagina` (`pagina`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
 -- Volcado de datos para la tabla `portadas`
@@ -268,13 +268,13 @@ CREATE TABLE IF NOT EXISTS `publicacion` (
   `tagname` varchar(330) NOT NULL COMMENT 'TRIAL',
   `portada` varchar(350) DEFAULT NULL COMMENT 'TRIAL',
   `detalle` varchar(250) DEFAULT NULL COMMENT 'TRIAL',
-  `cuerpo` longtext COMMENT 'TRIAL',
+  `cuerpo` longtext DEFAULT NULL COMMENT 'TRIAL',
   `fecpub` datetime NOT NULL COMMENT 'TRIAL',
   `fecreg` datetime DEFAULT NULL COMMENT 'TRIAL',
   `visible` char(1) DEFAULT 'N' COMMENT 'TRIAL',
   `trial656` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`idpub`)
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COMMENT='TRIAL';
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `publicacion`
@@ -294,18 +294,18 @@ INSERT INTO `publicacion` (`idpub`, `idcatg`, `titulo`, `tagname`, `portada`, `d
 DROP TABLE IF EXISTS `suscripciones`;
 CREATE TABLE IF NOT EXISTS `suscripciones` (
   `idsuscripcion` int(11) NOT NULL AUTO_INCREMENT,
-  `nombres` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `apellidos` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `correo` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `nivel` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `grado` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `consulta` text COLLATE utf8mb4_unicode_ci,
-  `asunto` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT 'informes',
-  `nombre_completo` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `fecha_suscripcion` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `estado` enum('activo','inactivo') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'activo',
-  `ip_registro` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nombres` varchar(50) DEFAULT NULL,
+  `apellidos` varchar(50) DEFAULT NULL,
+  `correo` varchar(100) DEFAULT NULL,
+  `nivel` varchar(20) DEFAULT NULL,
+  `grado` varchar(10) DEFAULT NULL,
+  `consulta` text DEFAULT NULL,
+  `asunto` varchar(50) DEFAULT 'informes',
+  `nombre_completo` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `fecha_suscripcion` timestamp NULL DEFAULT current_timestamp(),
+  `estado` enum('activo','inactivo') NOT NULL DEFAULT 'activo',
+  `ip_registro` varchar(45) DEFAULT NULL,
   `fecha_baja` datetime DEFAULT NULL,
   PRIMARY KEY (`idsuscripcion`),
   UNIQUE KEY `idx_correo_unique` (`correo`),
@@ -337,7 +337,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `trial656` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`iduser`),
   UNIQUE KEY `idx_nombre` (`nombre`)
-) ENGINE=MyISAM AUTO_INCREMENT=102 DEFAULT CHARSET=utf8mb4 COMMENT='TRIAL';
+) ENGINE=MyISAM AUTO_INCREMENT=102 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `usuarios`

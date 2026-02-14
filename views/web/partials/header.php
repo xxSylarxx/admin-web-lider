@@ -123,7 +123,7 @@
 
                 <div class="col-6 d-flex justify-content-start mininav">
 
-                    <div class="mininav-item my-2"><a href="<?= $dataEmpresa['facebook'] ?>" target="_blank"> <i class="fab fa-facebook"></i> <span class="ms-2">Facebook</span> </a></div>
+                    <div class="mininav-item my-2"><a href="<?= $dataEmpresa['facebook'] ?>" target="_blank"> <i class="fab fa-facebook"></i> <span class="ms-2">Facebook</span></a></div>
                     <div class="mininav-item my-2"><a href="<?= $dataEmpresa['instagram'] ?>" target="_blank"> <i class="fab fa-instagram"></i> <span class="ms-2">Instagram</span> </a></div>
                     <div class="mininav-item my-2"><a href="<?= $dataEmpresa['youtube'] ?>" target=" _blank"> <i class="fab fa-youtube"></i> <span class="ms-2">Youtube</span> </a></div>
                     <div class="mininav-item my-2"><a href="<?= $dataEmpresa['tiktok'] ?>" target="_blank"> <i class="fab fa-tiktok"></i> <span class="ms-2">Tik Tok</span> </a></div>

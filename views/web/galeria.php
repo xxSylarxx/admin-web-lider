@@ -43,9 +43,19 @@ if (isset($URI[1]) && is_numeric($URI[1])) {
     <link rel="shortcut icon" href="<?= PATH_PUBLIC ?>/img/icons/escudo.png" type="image/png">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/animate.min.css">
-    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/venobox.css">
+     <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/bootstrap.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/web.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/networks.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/modal-contacto.css">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/fonts/font-awesone/css/all.min.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/fonts/font-awesone/css/brands.min.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/fonts/font-awesone/css/solid.min.css">
 </head>
 
 <body>
@@ -56,6 +66,7 @@ if (isset($URI[1]) && is_numeric($URI[1])) {
 
     <!-- partial header  -->
     <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
 
     <style>
         .portada h2 {
@@ -237,7 +248,6 @@ if (isset($URI[1]) && is_numeric($URI[1])) {
         </div>
     </section>
 
-
     <script>
         new VenoBox({
             selector: '.img-links',
@@ -246,7 +256,19 @@ if (isset($URI[1]) && is_numeric($URI[1])) {
             navSpeed: 300,
         });
     </script>
-
+    
+    <script>
+        //Para que fontaawesone no ponga svg por default y use la etiqueta i por default
+        window.FontAwesomeConfig = {
+            autoReplaceSvg: false
+        };
+    </script>
+        <!-- Font Awesome JS -->
+    <script src="<?= PATH_PUBLIC ?>/fonts/font-awesone/js/all.min.js"></script>
+    <script src="<?= PATH_PUBLIC ?>/fonts/font-awesone/js/brands.min.js"></script>
+    <script src="<?= PATH_PUBLIC ?>/fonts/font-awesone/js/solid.min.js"></script>
+    <script src="<?= PATH_PUBLIC ?>/js/bootstrap.bundle.min.js"></script>
+<?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>
 </body>
 
 </html>

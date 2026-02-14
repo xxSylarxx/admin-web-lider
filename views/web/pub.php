@@ -32,16 +32,20 @@ if (isset($URI[1])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Colegio Santo Domingo El Líder</title>
     <link rel="icon" href="<?= PATH_PUBLIC ?>/img/icons/escudo.png">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/bootstrap.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/web.css">
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/networks.css">
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/modal-contacto.css">
+
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/fonts/font-awesone/css/all.min.css">
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/fonts/font-awesone/css/brands.min.css">
@@ -206,10 +210,18 @@ if (isset($URI[1])) {
     <script>
         AOS.init();
     </script>
-    <script src=".<?= PATH_PUBLIC ?>/fonts/font-awesone/js/all.min.js"></script>
-    <script src=".<?= PATH_PUBLIC ?>/fonts/font-awesone/js/brands.min.js"></script>
-    <script src=".<?= PATH_PUBLIC ?>/fonts/font-awesone/js/solid.min.js"></script>
+    <script>
+        //Para que fontaawesone no ponga svg por default y use la etiqueta i por default
+        window.FontAwesomeConfig = {
+            autoReplaceSvg: false
+        };
+    </script>
+     <!-- Font Awesome JS -->
+    <script src="<?= PATH_PUBLIC ?>/fonts/font-awesone/js/all.min.js"></script>
+    <script src="<?= PATH_PUBLIC ?>/fonts/font-awesone/js/brands.min.js"></script>
+    <script src="<?= PATH_PUBLIC ?>/fonts/font-awesone/js/solid.min.js"></script>
     <script src="<?= PATH_PUBLIC ?>/js/bootstrap.bundle.min.js"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const contentHtml = document.querySelector('#cuerpo-pub');
