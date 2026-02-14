@@ -115,7 +115,7 @@
                             </div>
                         </div>
                         <div class="mt-3">
-                            <label class="form-check-label">Declaro haber leído la <a class="enlace-politicas" href="./public/files/Politicas_Privacidad_Lidersd.pdf" target='_blank'>Política de Privacidad</a></label>
+                            <label class="form-check-label">Declaro haber leído la <a class="enlace-politicas" href="<?= PATH_PUBLIC ?>/files/Politicas_Privacidad_Lidersd.pdf" target='_blank'>Política de Privacidad</a></label>
                             <input type="checkbox" class="form-check-input" required>
                         </div>
                         <!-- <div class="mt-3">
@@ -135,22 +135,22 @@
     <div class="container">
         <div class="row" style="padding:2rem 0">
             <div class="col-lg-4">
-                <img src="./public/img/icons/escudo2.png" width="80" alt="escudo2">
+                <img src="<?= PATH_PUBLIC ?>/img/icons/escudo2.png" width="80" alt="escudo2">
                 <strong style="font-size:1.2rem;font-family:'Playfair Display',serif">Santo Domingo, El Líder</strong>
                 <p class="muted" style="margin-top:.5rem">"Formando Líderes Globales"</p>
                 <div class="div-footer-sociales" style="margin-top:1rem;display:flex;gap:.8rem">
                     <div class="d-flex justify-content-between">
                         <div class="col-lg-3">
-                            <div style="width: 40px;height: 40px;-moz-border-radius: 50%;-webkit-border-radius: 50%;border-radius: 50%;border:solid 1px var(--color8);font-size:25px;"><a class="social-footer" href="https://www.facebook.com/santodomingolider" target="_blank"><i class="fab fa-facebook " style="font-size:1.2rem;margin-top:10px;"></i></a></div>
+                            <div style="width: 40px;height: 40px;-moz-border-radius: 50%;-webkit-border-radius: 50%;border-radius: 50%;border:solid 1px var(--color8);font-size:25px;"><a class="social-footer" href="<?= $dataEmpresa['facebook'] ?>" target="_blank"><i class="fab fa-facebook " style="font-size:1.2rem;margin-top:10px;"></i></a></div>
                         </div>
                         <div class="col-lg-3 mx-2">
-                            <div class="" style="width: 40px;height: 40px;-moz-border-radius: 50%;-webkit-border-radius: 50%;border-radius: 50%;border:solid 1px var(--color8);font-size:25px;"><a class="social-footer" href="https://www.youtube.com/@santodomingolider" target="_blank"><i class="fab fa-youtube" style="font-size:1.2rem;margin-top:10px;"></i></a></div>
+                            <div class="" style="width: 40px;height: 40px;-moz-border-radius: 50%;-webkit-border-radius: 50%;border-radius: 50%;border:solid 1px var(--color8);font-size:25px;"><a class="social-footer" href="<?= $dataEmpresa['youtube'] ?>" target="_blank"><i class="fab fa-youtube" style="font-size:1.2rem;margin-top:10px;"></i></a></div>
                         </div>
                         <div class="col-lg-3 mx-2">
-                            <div class="" style="width: 40px;height: 40px;-moz-border-radius: 50%;-webkit-border-radius: 50%;border-radius: 50%;border:solid 1px var(--color8);font-size:25px;"><a class="social-footer" href="https://www.instagram.com/santodomingolider" target="_blank"><i class="fab fa-instagram" style="font-size:1.2rem;margin-top:10px;"></i></a></div>
+                            <div class="" style="width: 40px;height: 40px;-moz-border-radius: 50%;-webkit-border-radius: 50%;border-radius: 50%;border:solid 1px var(--color8);font-size:25px;"><a class="social-footer" href="<?= $dataEmpresa['instagram'] ?>" target="_blank"><i class="fab fa-instagram" style="font-size:1.2rem;margin-top:10px;"></i></a></div>
                         </div>
                         <div class="col-lg-3">
-                            <div style="width: 40px;height: 40px;-moz-border-radius: 50%;-webkit-border-radius: 50%;border-radius: 50%;border:solid 1px var(--color8);font-size:25px;"><a class="social-footer" href="https://www.tiktok.com/@santodomingolider" target="_blank"><i class="fab fa-tiktok" style="font-size:1.2rem;margin-top:10px;"></i></a></div>
+                            <div style="width: 40px;height: 40px;-moz-border-radius: 50%;-webkit-border-radius: 50%;border-radius: 50%;border:solid 1px var(--color8);font-size:25px;"><a class="social-footer" href="<?= $dataEmpresa['tiktok'] ?>" target="_blank"><i class="fab fa-tiktok" style="font-size:1.2rem;margin-top:10px;"></i></a></div>
                         </div>
                     </div>
                 </div>
@@ -162,7 +162,7 @@
                         <a href="/historia">Nosotros</a>
                         <a href="/metodologia">Propuesta educativa</a>
                         <a href="/inicial">Niveles</a>
-                        <a href="/admision">Admisión 2026</a>
+                        <a href="/admision">Admisión <?= $dataEmpresa['anio_admision'] ?></a>
                     </div>
                 </div>
             </div>
@@ -188,11 +188,11 @@
 
                 <div style="margin-top:1rem;line-height:1.8">
                     <!--       <div style="color:var(--color8);">📍 Mz. N lote 4 Urbanización Los Ficus de Carabayllo, 5ta Etapa carabayllo</div> -->
-                    <div class="d-flex justify-content-start py-1" style="color:var(--color8);"><i class="fas fa-location-arrow pt-2"></i>&nbsp;&nbsp;Mz. N lote 4 Urbanización Los Ficus de Carabayllo, 5ta Etapa carabayllo</div>
+                    <div class="d-flex justify-content-start py-1" style="color:var(--color8);"><i class="fas fa-location-arrow pt-2"></i>&nbsp;&nbsp;<?= $dataEmpresa['direccion'] ?></div>
                     <div class="d-flex justify-content-start py-1" style="color:var(--color8);"><i class="fas fa-clock pt-2"></i>&nbsp;&nbsp;Horario de Atención: Lunes a Viernes<br> 8:00 a.m. a 2:00 p.m. / 2:40 p.m. a 5:00 p.m.<br>
                         Sábados: 8:00 - -1:00 p.m.
                     </div>
-                    <div class="d-flex justify-content-start py-1" style="color:var(--color8);"><a href="https://wa.me/+51951352404"><i class="fab fa-whatsapp pt-2"></i>&nbsp;&nbsp;951 352 404</div></a>
+                    <div class="d-flex justify-content-start py-1" style="color:var(--color8);"><a href="https://wa.me/<?= $dataEmpresa['whatsapp1'] ?>"><i class="fab fa-whatsapp pt-2"></i>&nbsp;&nbsp;951 352 404</div></a>
                 </div>
             </div>
         </div>

@@ -1,3 +1,14 @@
+<?php
+
+use Admin\Models;
+
+$objEmpresa = new Models\EmpresaModel;
+$dataEmpresa = $objEmpresa->listEmpresa()[1];
+
+$objPortada = new Models\PortadasModel;
+$dataPortada = $objPortada->obtenerPortada('admision');
+
+?>
 <!doctype html>
 <html lang="es">
 
@@ -76,20 +87,22 @@
 <body>
     <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
     <?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
+    <?php if(!empty($dataPortada)){ ?>
     <section class="container-fluid portada px-0">
         <div class="titleContainer">
             <div class="animate__animated animate__fadeInLeft">
-                <h2 class="title1">Admisión</h2>
+                <h2 class="title1"><?= !empty($dataPortada['titulo']) ? $dataPortada['titulo'] : 'Titulo' ?></h2>
             </div>
         </div>
-        <img src="<?= PATH_PUBLIC ?>/img/portadas/portada_interna.png" alt="">
+        <img src="<?= $dataPortada['imagen'] ?>" alt="">
     </section>
+    <?php } ?>
     <section class="admision-section py-5">
         <div class="container pb-5">
             <div class="row pt-5">
                 <div class="col-lg-12">
                     <div class="d-flex justify-content-center">
-                        <h2 class="section-title">Proceso de Admisión 2026</h2>
+                        <h2 class="section-title">Proceso de Admisión <?= $dataEmpresa['anio_admision'] ?></h2>
 
                     </div>
                 </div>
@@ -119,7 +132,7 @@
                                     <span>Copia del DNI del padre de familia y alumno</span>
                                 </li>
                                 <li><i class="fas fa-check-circle me-2" style="color:var(--color1);"></i>
-                                    <span>Se programará la entrevista con el departamento psicopedagógico y se le estará informando al padre de familia la fecha de la entrevista. (enero 2026)</span>
+                                    <span>Se programará la entrevista con el departamento psicopedagógico y se le estará informando al padre de familia la fecha de la entrevista. (enero <?= $dataEmpresa['anio_admision'] ?>)</span>
                                 </li>
                             </ul>
                         </div>
@@ -137,7 +150,7 @@
                         <div class="admision-card-body">
                             <h4 class="admision-title" style="color:var(--color3);">Documentación</h4>
                             <p class="mb-2" style="color:#0DCAF0;"><em><i class="fas fa-info-circle me-1 text-info"></i> Constancia de Vacante: Se entrega después de la entrevista.</em></p>
-                            <p class="fw-bold mb-2" style="color:var(--color5);">Requisitos Matrícula 2026:</p>
+                            <p class="fw-bold mb-2" style="color:var(--color5);">Requisitos Matrícula <?= $dataEmpresa['anio_admision'] ?>:</p>
                             <div class="requisitos-box mb-3">
                                 <p class="mb-1 fw-semibold" style="color:var(--color3);"><i class="fas fa-child me-1" style="color:var(--color3);"></i> Inicial 3 años</p>
                                 <ul class="admision-sublist">
@@ -149,7 +162,7 @@
                                 <p class="mb-1 fw-semibold" style="color:var(--color3);"><i class="fas fa-child me-1" style="color:var(--color3);"></i> Inicial 4 y 5 años</p>
                                 <ul class="admision-sublist">
                                     <li>Foto de DNI del alumno y PP.FF. (ambos lados).</li>
-                                    <li>Constancia de matrícula del SIAGIE 2025.</li>
+                                    <li>Constancia de matrícula del SIAGIE <?= (int)$dataEmpresa['anio_admision'] - 1 ?>.</li>
                                     <li>Certificado de estudios.</li>
                                     <li>Libreta de notas del último período académico cursado.</li>
                                     <li>Tarjeta de Control de Vacunas.</li>
@@ -159,7 +172,7 @@
                                 <p class="mb-1 fw-semibold" style="color:var(--color3);"><i class="fas fa-graduation-cap me-1" style="color:var(--color3);"></i>Primaria – Secundaria</p>
                                 <ul class="admision-sublist">
                                     <li>Foto de DNI del alumno y PP.FF. (ambos lados).</li>
-                                    <li>Constancia de matrícula del SIAGIE 2025.</li>
+                                    <li>Constancia de matrícula del SIAGIE <?= (int)$dataEmpresa['anio_admision'] - 1 ?>.</li>
                                     <li>Certificado de estudios.</li>
                                     <li>Libreta de notas del último período académico cursado.</li>
                                 </ul>
@@ -180,7 +193,7 @@
                             <h4 class="admision-title" style="color:var(--color5);">Matrícula</h4>
                             <ul class="admision-list">
                                 <li><i class="fas fa-check-circle me-2" style="color:var(--color5);"></i>
-                                    <span>En el mes de <b> Enero </b> se inicia el proceso de Matrícula 2026.</span>
+                                    <span>En el mes de <b> Enero </b> se inicia el proceso de Matrícula <?= $dataEmpresa['anio_admision'] ?>.</span>
                                 </li>
                                 <li><i class="fas fa-check-circle me-2" style="color:var(--color5);"></i>
                                     <span>Se procede a realizar el pago (efectivo o cuenta bancaria).</span>

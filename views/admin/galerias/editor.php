@@ -238,7 +238,6 @@
 
                             <span><?= $this->translate('Categoría') ?>:</span>
                             <select class="form-select mt-1 mb-3" name="idcatg">
-                                <option value="">Sin categoría</option>
                                 <?php foreach ($this->listCategorias as $key => $categ) :
                                     if ($categ['estado'] == 'I') {
                                         continue;

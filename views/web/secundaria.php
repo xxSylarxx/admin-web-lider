@@ -1,3 +1,14 @@
+<?php
+
+use Admin\Models;
+
+$objEmpresa = new Models\EmpresaModel;
+$dataEmpresa = $objEmpresa->listEmpresa()[1];
+
+$objPortada = new Models\PortadasModel;
+$dataPortada = $objPortada->obtenerPortada('secundaria');
+
+?>
 <!doctype html>
 <html lang="es">
 
@@ -205,14 +216,16 @@
 <body>
     <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
     <?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
+    <?php if(!empty($dataPortada)){ ?>
     <section class="container-fluid portada px-0">
         <div class="titleContainer">
             <div class="animate__animated animate__fadeInLeft">
                 <h2 class="title1">Nivel Secundaria</h2>
             </div>
         </div>
-        <img src="<?= PATH_PUBLIC ?>/img/portadas/portada_interna.png" alt="">
+        <img src="<?= $dataPortada['imagen'] ?>" alt="">
     </section>
+    <?php } ?>
     <section class="bienvenidos-section py-5">
         <div class="container py-4">
             <div class="row g-5 align-items-center">

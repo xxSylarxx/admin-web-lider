@@ -1,3 +1,14 @@
+<?php
+
+use Admin\Models;
+
+$objEmpresa = new Models\EmpresaModel;
+$dataEmpresa = $objEmpresa->listEmpresa()[1];
+
+$objPortada = new Models\PortadasModel;
+$dataPortada = $objPortada->obtenerPortada('identidad');
+
+?>
 <!doctype html>
 <html lang="es">
 
@@ -191,17 +202,18 @@
 
     <!-- Main content will be added here -->
     <!-- Bienvenida Section -->
-     
+    <?php if(!empty($dataPortada)){ ?>
     <section class="container-fluid portada px-0">
         <div class="titleContainer">
             <div class="animate__animated animate__fadeInLeft">
                 <h2 class="title1">
-                    Nuestra Identidad
+                   <?= !empty($dataPortada['titulo']) ? $dataPortada['titulo'] : 'Titulo' ?>
                 </h2>
             </div>
         </div>
         <img src="<?= $dataPortada['imagen'] ?>" alt="">
     </section>
+    <?php } ?>
     <section id="presentacion-identidad" style="padding-top:4rem;">
         <div class="container">
             <div class="row d-flex justify-content-center">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3307
--- Tiempo de generación: 13-02-2026 a las 11:32:47
+-- Tiempo de generación: 14-02-2026 a las 12:05:30
 -- Versión del servidor: 5.5.62-MariaDB
 -- Versión de PHP: 7.4.33
 
@@ -114,10 +114,7 @@ CREATE TABLE IF NOT EXISTS `categorias_galerias` (
 --
 
 INSERT INTO `categorias_galerias` (`idcatg`, `nombre`, `estado`, `fecreg`) VALUES
-(1, 'Eventos', 'A', '2026-01-19 09:34:07'),
-(2, 'Actividades', 'A', '2026-01-19 09:34:07'),
-(3, 'Infraestructura', 'A', '2026-01-19 09:34:07'),
-(4, 'Académico', 'A', '2026-01-19 09:34:07');
+(1, 'Eventos', 'A', '2026-01-19 09:34:07');
 
 -- --------------------------------------------------------
 
@@ -182,14 +179,14 @@ CREATE TABLE IF NOT EXISTS `galeria` (
   `trial656` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`idgaleria`),
   KEY `fk_galeria_categoria` (`idcatg`)
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COMMENT='TRIAL';
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `galeria`
 --
 
 INSERT INTO `galeria` (`idgaleria`, `idcatg`, `titulo`, `detalle`, `ncolum`, `cuerpo`, `modo`, `portada`, `fecreg`, `visible`, `trial656`) VALUES
-(20, 2, 'Inicio de ejemplo', '', 2, '[{\"id\":81641,\"tipo\":\"I\",\"content\":\"/public/img/galeria/fachada.jpeg\",\"portada\":\"/public/img/galeria/fachada.jpeg\"},{\"id\":37735,\"tipo\":\"I\",\"content\":\"/public/img/galeria/p-boletin.jpg\",\"portada\":\"/public/img/galeria/p-boletin.jpg\"}]', 'A', 'http://admin-web-lidersd.com/public/img/galeria/p-boletin.jpg', '2026-02-13 06:08:10', 'S', NULL);
+(21, 1, 'Ceremonia de Inauguración', 'Ceremonia de Inauguración', 2, '[{\"id\":47030,\"tipo\":\"I\",\"content\":\"/public/img/galeria/galeria1.jpg\",\"portada\":\"/public/img/galeria/galeria1.jpg\"},{\"id\":59876,\"tipo\":\"I\",\"content\":\"/public/img/galeria/galeria2.jpg\",\"portada\":\"/public/img/galeria/galeria2.jpg\"},{\"id\":95391,\"tipo\":\"I\",\"content\":\"/public/img/galeria/galeria3.jpg\",\"portada\":\"/public/img/galeria/galeria3.jpg\"},{\"id\":17642,\"tipo\":\"I\",\"content\":\"/public/img/galeria/galeria4.jpg\",\"portada\":\"/public/img/galeria/galeria4.jpg\"},{\"id\":35116,\"tipo\":\"I\",\"content\":\"/public/img/galeria/galeria5.jpg\",\"portada\":\"/public/img/galeria/galeria5.jpg\"},{\"id\":54877,\"tipo\":\"I\",\"content\":\"/public/img/galeria/galeria6.jpg\",\"portada\":\"/public/img/galeria/galeria6.jpg\"},{\"id\":8172,\"tipo\":\"I\",\"content\":\"/public/img/galeria/galeria7.jpg\",\"portada\":\"/public/img/galeria/galeria7.jpg\"},{\"id\":24936,\"tipo\":\"I\",\"content\":\"/public/img/galeria/galeria8.jpg\",\"portada\":\"/public/img/galeria/galeria8.jpg\"},{\"id\":33463,\"tipo\":\"I\",\"content\":\"/public/img/galeria/galeria9.jpg\",\"portada\":\"/public/img/galeria/galeria9.jpg\"}]', 'A', 'http://admin-web-lidersd.com/public/img/galeria/galeria1.jpg', '2026-02-14 05:03:36', 'S', NULL);
 
 -- --------------------------------------------------------
 
@@ -254,7 +251,7 @@ INSERT INTO `portadas` (`idportada`, `pagina`, `nombre`, `imagen`, `titulo`, `su
 (7, 'primaria', 'Nivel Primaria', '/public/img/portadas/portada_interna.png', 'Nivel Primaria', NULL, 'A', '2026-02-13 11:19:09', NULL),
 (8, 'secundaria', 'Nivel Secundaria', '/public/img/portadas/portada_interna.png', 'Nivel Secundaria', NULL, 'A', '2026-02-13 11:19:30', NULL),
 (9, 'comunicados', 'Comunicados', '/public/img/portadas/portada_interna.png', 'Publicaciones', NULL, 'A', '2026-02-13 11:19:56', NULL),
-(10, 'galeria', 'Galerías', '/public/img/portadas/portada_interna.png', 'Galerías', NULL, 'A', '2026-02-13 11:21:21', NULL),
+(10, 'galerias', 'Galerías', '/public/img/portadas/portada_interna.png', 'Galerías', NULL, 'A', '2026-02-13 11:21:21', NULL),
 (11, 'admision', 'Admisión', '/public/img/portadas/portada_interna.png', 'Admisión', '', 'A', '2026-02-13 11:21:45', NULL);
 
 -- --------------------------------------------------------

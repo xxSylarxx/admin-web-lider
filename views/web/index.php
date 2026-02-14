@@ -501,18 +501,19 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
                 <div class="row cards d-flex justify-content-center align-items-center" style="position:relative;">
                     <div class="decoration-circle decoration-1"></div>
                     <div class="decoration-circle decoration-2"></div>
+                     <?php foreach ($dataPublicaciones as $key => $pub) : ?>
                     <div class="col-lg-4 pt-5">
                         <div class="card-galeria card3">
                             <div class="container-galeria">
-                                <img id="portada-galeria" src="<?= PATH_PUBLIC ?>/img/galeria/visitas_guiadas.jpg" alt="galeria">
+                                <img id="portada-galeria" src="<?= $pub['portada'] ?>" alt="galeria">
                             </div>
                             <div class="details">
                                 <div class="row d-flex">
                                     <div class="col-8">
                                         <div class="mx-3" style="display:flex;justify-content:center;flex-direction:column;">
-                                            <h3>Visitas Guiadas</h3>
+                                            <h3><?= $pub['titulo'] ?></h3>
                                             <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p> -->
-                                            <a class="btn-pub" href="view.php?id=1">Ver Más</a>
+                                            <a class="btn-pub" href="/pub/<?= $pub['tagname'] ?>">Ver Más</a>
                                         </div>
                                     </div>
                                     <div class="col-4 d-flex justify-content-end align-items-start">
@@ -522,48 +523,7 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 pt-5">
-                        <div class="card-galeria card3">
-                            <div class="container-galeria">
-                                <img id="portada-galeria" src="<?= PATH_PUBLIC ?>/img/galeria/fachada.jpeg" alt="galeria">
-                            </div>
-                            <div class="details">
-                                <div class="row d-flex">
-                                    <div class="col-8">
-                                        <div class="mx-3" style="display:flex;justify-content:center;flex-direction:column;">
-                                            <h3>Matrícula 2026</h3>
-                                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p> -->
-                                            <a class="btn-pub" href="view.php?id=2">Ver Más</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 d-flex justify-content-end align-items-start">
-                                        <img class="d-block mx-4 escudo-badge" src="<?= PATH_PUBLIC ?>/img/icons/escudo.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 pt-5">
-                        <div class="card-galeria card3">
-                            <div class="container-galeria">
-                                <img id="portada-galeria" src="<?= PATH_PUBLIC ?>/img/galeria/p-boletin.jpg" alt="galeria">
-                            </div>
-                            <div class="details">
-                                <div class="row d-flex">
-                                    <div class="col-8">
-                                        <div class="mx-3" style="display:flex;justify-content:center;flex-direction:column;">
-                                            <h3>Boletín Informativo</h3>
-                                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p> -->
-                                            <a class="btn-pub" href="view.php?id=3">Ver Más</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 d-flex justify-content-end align-items-start">
-                                        <img class="d-block mx-4 escudo-badge" src="<?= PATH_PUBLIC ?>/img/icons/escudo.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </section>

@@ -1,3 +1,33 @@
+<?php
+
+use Admin\Models;
+
+$objEmpresa = new Models\EmpresaModel;
+$objCategorias = new Models\CategoriasModel;
+$objPublicaciones = new Models\PublicacionModel;
+$objPortada = new Models\PortadasModel;
+$dataPortada = $objPortada->obtenerPortada('comunicados');
+$dataEmpresa = $objEmpresa->listEmpresa()[1];
+
+$filter = isset($URI[1]) ? $URI[1] : 'all';
+$pagina = isset($URI[2]) ? $URI[2] : '1';
+$initPub = (PUB_MAX_WEB * $pagina) - PUB_MAX_WEB;
+
+if ($filter !== 'all') {
+    $dataCategoria = $objCategorias->buscarCategoria($URI[1], false);
+    $idCateg = $dataCategoria['idcatg'];
+    $nameCategoria = $dataCategoria['nombre'];
+    $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
+} else {
+    $idCateg = '%';
+    $nameCategoria = 'All';
+    $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
+}
+
+// total de publicaciones
+$total = $objPublicaciones->totalPublicaciones($idCateg, true);
+
+?>
 <!doctype html>
 <html lang="es">
 
@@ -69,15 +99,17 @@
 
 <body>
     <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
-    <<?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
+    <?php if(!empty($dataPortada)){ ?>
     <section class="container-fluid portada px-0">
         <div class="titleContainer">
             <div class="animate__animated animate__fadeInLeft">
-                <h2 class="title1">Publicaciones</h2>
+                <h2 class="title1"><?= !empty($dataPortada['titulo']) ? $dataPortada['titulo'] : 'Titulo' ?></h2>
             </div>
         </div>
-        <img src="<?= PATH_PUBLIC ?>/img/portadas/portada_interna.png" alt="">
+        <img src="<?= $dataPortada['imagen'] ?>" alt="">
     </section>
+       <?php } ?>
     <section class="publicaciones-section">
         <div class="container">
             <div class="row pt-5">
@@ -90,18 +122,19 @@
             <div class="row cards d-flex justify-content-center align-items-center" style="position:relative;">
                 <div class="decoration-circle decoration-1"></div>
                 <div class="decoration-circle decoration-2"></div>
+                 <?php foreach ($dataPublicaciones as $key => $pub) : ?>
                 <div class="col-lg-4 pt-5">
                     <div class="card-galeria card3">
                         <div class="container-galeria">
-                            <img id="portada-galeria" src="<?= PATH_PUBLIC ?>/img/galeria/visitas_guiadas.jpg" alt="galeria">
+                            <img id="portada-galeria" src="<?= $pub['portada'] ?>" alt="galeria">
                         </div>
                         <div class="details">
                             <div class="row d-flex">
                                 <div class="col-8">
                                     <div class="mx-3" style="display:flex;justify-content:center;flex-direction:column;">
-                                        <h3>Visitas Guiadas</h3>
+                                        <h3><?= $pub['titulo'] ?></h3>
                                         <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p> -->
-                                        <a class="btn-pub" href="view.php?id=1">Ver Más</a>
+                                        <a class="btn-pub" href="/pub/<?= $pub['tagname'] ?>">Ver Más</a>
                                     </div>
                                 </div>
                                 <div class="col-4 d-flex justify-content-end align-items-start">
@@ -111,48 +144,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 pt-5">
-                    <div class="card-galeria card3">
-                        <div class="container-galeria">
-                            <img id="portada-galeria" src="<?= PATH_PUBLIC ?>/img/galeria/fachada.jpeg" alt="galeria">
-                        </div>
-                        <div class="details">
-                            <div class="row d-flex">
-                                <div class="col-8">
-                                    <div class="mx-3" style="display:flex;justify-content:center;flex-direction:column;">
-                                        <h3>Matrícula 2026</h3>
-                                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p> -->
-                                        <a class="btn-pub" href="view.php?id=2">Ver Más</a>
-                                    </div>
-                                </div>
-                                <div class="col-4 d-flex justify-content-end align-items-start">
-                                    <img class="d-block mx-4" src="<?= PATH_PUBLIC ?>/img/icons/escudo.png" width="60%" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 pt-5">
-                    <div class="card-galeria card3">
-                        <div class="container-galeria">
-                            <img id="portada-galeria" src="<?= PATH_PUBLIC ?>/img/galeria/p-boletin.jpg" alt="galeria">
-                        </div>
-                        <div class="details">
-                            <div class="row d-flex">
-                                <div class="col-8">
-                                    <div class="mx-3" style="display:flex;justify-content:center;flex-direction:column;">
-                                        <h3>Boletín Informativo</h3>
-                                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p> -->
-                                        <a class="btn-pub" href="view.php?id=3">Ver Más</a>
-                                    </div>
-                                </div>
-                                <div class="col-4 d-flex justify-content-end align-items-start">
-                                    <img class="d-block mx-4" src="<?= PATH_PUBLIC ?>/img/icons/escudo.png" width="60%" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
