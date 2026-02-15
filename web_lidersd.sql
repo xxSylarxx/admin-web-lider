@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `admision` (
   `titulo` varchar(255) DEFAULT NULL,
   `cuerpo` longtext DEFAULT NULL,
   PRIMARY KEY (`idadmision`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `admision`
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `banner` (
   `estado` varchar(1) DEFAULT NULL,
   `trial646` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci COMMENT='TRIAL';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `banner`
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `categorias` (
   `trial652` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`idcatg`),
   UNIQUE KEY `idx_nombre` (`nombre`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci COMMENT='TRIAL';
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `categorias`
@@ -149,7 +149,7 @@ CREATE TABLE IF NOT EXISTS `empresa` (
   `trial652` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`idemp`),
   UNIQUE KEY `idx_nombre` (`nombre`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci COMMENT='TRIAL';
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `empresa`
@@ -179,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `galeria` (
   `trial656` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`idgaleria`),
   KEY `fk_galeria_categoria` (`idcatg`)
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci COMMENT='TRIAL';
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `galeria`
@@ -207,7 +207,7 @@ CREATE TABLE IF NOT EXISTS `popup` (
   `visible` char(1) DEFAULT NULL COMMENT 'TRIAL',
   `trial656` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci COMMENT='TRIAL';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `popup`
@@ -235,7 +235,7 @@ CREATE TABLE IF NOT EXISTS `portadas` (
   `fecact` datetime DEFAULT NULL,
   PRIMARY KEY (`idportada`),
   UNIQUE KEY `idx_pagina` (`pagina`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `portadas`
@@ -274,7 +274,7 @@ CREATE TABLE IF NOT EXISTS `publicacion` (
   `visible` char(1) DEFAULT 'N' COMMENT 'TRIAL',
   `trial656` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`idpub`)
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci COMMENT='TRIAL';
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `publicacion`
@@ -337,7 +337,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `trial656` char(1) DEFAULT NULL COMMENT 'TRIAL',
   PRIMARY KEY (`iduser`),
   UNIQUE KEY `idx_nombre` (`nombre`)
-) ENGINE=MyISAM AUTO_INCREMENT=102 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci COMMENT='TRIAL';
+) ENGINE=MyISAM AUTO_INCREMENT=102 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='TRIAL';
 
 --
 -- Volcado de datos para la tabla `usuarios`

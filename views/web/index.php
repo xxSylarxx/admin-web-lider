@@ -64,6 +64,8 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/fonts/font-awesone/css/all.min.css">
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/fonts/font-awesone/css/brands.min.css">
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/fonts/font-awesone/css/solid.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
     <style>
@@ -426,7 +428,7 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
     <main id="main">
 
         <!-- Sección de Bienvenidos -->
-        <section class="bienvenidos-section py-5">
+        <section class="bienvenidos-section py-5" data-aos="fade-up">
             <div class="container py-4">
                 <div class="row g-5 align-items-center">
                     <!-- Columna de Contenido -->
@@ -491,7 +493,7 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
             </div>
             </div>
         </section>
-        <section class="niveles-section">
+        <section class="niveles-section" data-aos="fade-up">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -573,7 +575,7 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
         </section>
 
 
-        <section class="publicaciones-section">
+        <section class="publicaciones-section" data-aos="fade-up">
             <div class="container">
                 <div class="row pt-5">
                     <div class="col-lg-12">
@@ -613,7 +615,7 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
             </div>
         </section>
 
-        <section class="ubicacion-section">
+        <section class="ubicacion-section" data-aos="fade-up">
             <div class="container">
                 <div class="row pt-5">
                     <div class="col-lg-12">
@@ -649,7 +651,9 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
     <script src="<?= PATH_PUBLIC ?>/fonts/font-awesone/js/brands.min.js"></script>
     <script src="<?= PATH_PUBLIC ?>/fonts/font-awesone/js/solid.min.js"></script>
     <script src="<?= PATH_PUBLIC ?>/js/bootstrap.bundle.min.js"></script>
-
+<script>
+  AOS.init();
+</script>
 </body>
 
 </html>
