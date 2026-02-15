@@ -252,8 +252,8 @@ die();
                 html += `<li id="item_${index}" class="ui-sortable-handle mb-3">
                     <div class="box-img">
                         <div class="detail d-flex justify-content-end align-items-center px-2">
-                            <a class="me-2 text-white" onclick="TituloImagen(${index})" title="Agregar Titulo"><i class="fas fa-pen"></i> Título</a>
-                            <a class="me-2 text-white" onclick="DetalleImagen(${index})" title="Agregar Detalle"><i class="far fa-file-alt"></i>&nbsp;Detalle</a>
+                            <a class="me-2 text-white" onclick="TituloImagen(${index})" title="Agregar Titulo" hidden><i class="fas fa-pen"></i> Título</a>
+                            <a class="me-2 text-white" onclick="DetalleImagen(${index})" title="Agregar Detalle" hidden><i class="far fa-file-alt"></i>&nbsp;Detalle</a>
                             <a class="me-2 text-white" onclick="enlaceImagen(${index})" title="Agregar enlace"><i class="fas fa-link"></i> Enlace</a>
                             <a class="ms-1 text-white" onclick="eliminarImagen(${index})" title="Eliminar"><i class="far fa-trash-alt"></i> Eliminar</a>
                         </div>
