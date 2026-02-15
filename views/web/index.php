@@ -161,8 +161,10 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
 
         /* Altura del carousel responsive */
         #carouselExampleIndicators .carousel-item img {
-            height: 600px;
-            object-fit: cover;
+            /*  height: 600px;
+            object-fit: cover; */
+            height: auto;
+            object-fit: initial;
         }
 
         @media (max-width: 991px) {
@@ -394,7 +396,14 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
                     <?php
                     foreach ($dataBanner['cuerpo'] as $key => $val) : ?>
                         <div class="carousel-item <?= $key == 0 ? 'active' : '' ?>">
-                            <img src="<?= $val['imagen'] ?>" class="d-block w-100">
+                            <?php if (empty($val['enlace'])) { ?>
+                                <img src="<?= $val['imagen'] ?>" class="d-block w-100">
+
+                            <?php } else { ?>
+                                <a href="<?= $val['enlace'] ?>" target="_blank">
+                                    <img src="<?= $val['imagen'] ?>" class="d-block w-100" style="<?= $dataBanner['opciones']['dimensionar'] ? 'object-fit: initial;' : null ?>;">
+                                </a>
+                            <?php } ?>
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -651,9 +660,9 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
     <script src="<?= PATH_PUBLIC ?>/fonts/font-awesone/js/brands.min.js"></script>
     <script src="<?= PATH_PUBLIC ?>/fonts/font-awesone/js/solid.min.js"></script>
     <script src="<?= PATH_PUBLIC ?>/js/bootstrap.bundle.min.js"></script>
-<script>
-  AOS.init();
-</script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
