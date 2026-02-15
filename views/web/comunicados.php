@@ -146,6 +146,13 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                 </div>
                 <?php endforeach; ?>
             </div>
+            <div class="row pt-4">
+            <div class="col-lg pt-3">
+                <ul class="pagination justify-content-center">
+                    <?= $objPublicaciones->paginationWeb($filter, $total, $pagina, "/comunicados/"); ?>
+                </ul>
+            </div>
+        </div>
         </div>
     </section>
     <?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>
