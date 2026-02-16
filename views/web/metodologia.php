@@ -96,10 +96,20 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
         .welcome-image2-card:hover .welcome-image2 {
             transform: scale(1.05);
         }
-        
+
         @media (max-width: 768px) {
             .portada .titleContainer .title1 {
                 font-size: 2rem;
+            }
+
+            h2::after {
+                content: "";
+                position: absolute;
+                left: 45%;
+                bottom: 0;
+                width: 60px;
+                height: 3px;
+                background: linear-gradient(90deg, var(--color1), var(--color4));
             }
         }
     </style>
@@ -108,29 +118,29 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
 <body>
     <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
     <?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
-    <?php if(!empty($dataPortada)){ ?>
-    <section class="container-fluid portada px-0">
-        <div class="titleContainer">
-            <div class="animate__animated animate__fadeInLeft">
-                <h2 class="title1">
-                    <?= !empty($dataPortada['titulo']) ? $dataPortada['titulo'] : 'Titulo' ?>
-                </h2>
+    <?php if (!empty($dataPortada)) { ?>
+        <section class="container-fluid portada px-0">
+            <div class="titleContainer">
+                <div class="animate__animated animate__fadeInLeft">
+                    <h2 class="title1">
+                        <?= !empty($dataPortada['titulo']) ? $dataPortada['titulo'] : 'Titulo' ?>
+                    </h2>
+                </div>
             </div>
-        </div>
-        <img src="<?= $dataPortada['imagen'] ?>" alt="">
-    </section>
+            <img src="<?= $dataPortada['imagen'] ?>" alt="">
+        </section>
     <?php } ?>
-    <section class="bienvenidos-section py-5" style="background-color: white;">
+    <section class="bienvenidos-section  pt-5 pb-0 py-md-5" style="background-color: white;">
         <div class="container py-4">
             <div class="row g-5 align-items-center">
                 <!-- Columna de Contenido -->
                 <div class="col-lg-12 order-2 order-lg-1">
                     <div class="welcome-content">
                         <p>
-                           La metodología del Colegio <b>Santo Domingo, El Líder</b> reconoce que cada estudiante posee <b>habilidades, talentos y formas propias de aprender,</b> por lo que promovemos una enseñanza que atiende la diversidad y favorece el desarrollo integral.</p>
-                           <p>Nuestro enfoque pedagógico integra estrategias y actividades que estimulan distintas capacidades cognitivas, creativas, sociales y emocionales, a través de <b>proyectos, dinámicas participativas y experiencias significativas,</b> orientadas al aprendizaje activo.</p>
-                           <p>Acompañamos a nuestros estudiantes en el descubrimiento y fortalecimiento de sus habilidades, promoviendo el <b>pensamiento crítico, la creatividad, la autonomía y el compromiso con su propio aprendizaje,</b> en un entorno inclusivo, motivador y respetuoso.</p>
-                           <p>Esta metodología permite que cada estudiante desarrolle su máximo potencial, preparándose para afrontar los retos académicos y personales con <b>liderazgo y visión global.</b></p>
+                            La metodología del Colegio <b>Santo Domingo, El Líder</b> reconoce que cada estudiante posee <b>habilidades, talentos y formas propias de aprender,</b> por lo que promovemos una enseñanza que atiende la diversidad y favorece el desarrollo integral.</p>
+                        <p>Nuestro enfoque pedagógico integra estrategias y actividades que estimulan distintas capacidades cognitivas, creativas, sociales y emocionales, a través de <b>proyectos, dinámicas participativas y experiencias significativas,</b> orientadas al aprendizaje activo.</p>
+                        <p>Acompañamos a nuestros estudiantes en el descubrimiento y fortalecimiento de sus habilidades, promoviendo el <b>pensamiento crítico, la creatividad, la autonomía y el compromiso con su propio aprendizaje,</b> en un entorno inclusivo, motivador y respetuoso.</p>
+                        <p>Esta metodología permite que cada estudiante desarrolle su máximo potencial, preparándose para afrontar los retos académicos y personales con <b>liderazgo y visión global.</b></p>
                     </div>
                 </div>
                 <!-- Columna de Imagen -->
@@ -148,7 +158,7 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
     </section>
     <style>
         #proyectos {
-            padding-bottom: 5rem;
+            padding-bottom: 3.5rem;
 
         }
 
@@ -162,12 +172,12 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
         }
 
         .sedes_slider img {
-              width: 100%;
-              height: 320px;
-              object-fit: cover;
-              border-radius: 10px;
-              display: block;
-              margin: 0 auto;
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
         }
 
         #proyectos>.container-fluid {
@@ -228,6 +238,7 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
             pointer-events: none;
             z-index: 2;
         }
+
         .sedes_content_slider {
             position: relative;
         }
@@ -237,8 +248,8 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
         .owl-next {
             background: var(--color1) !important;
             color: white !important;
-            border-radius:50% !important;
-            border:4px solid white!important;
+            border-radius: 50% !important;
+            border: 4px solid white !important;
             width: 40px;
             height: 40px;
             display: flex !important;
@@ -283,6 +294,10 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
                 cursor: pointer;
 
             }
+             #proyectos {
+            padding-bottom: 0rem;
+
+        }
 
         }
     </style>
@@ -316,8 +331,8 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
 
             <br>
 
-            <div class="row py-5">
-                <div class="col-lg-6 my-auto">
+            <div class="row py-3 py-md-5">
+                <div class="col-lg-6 my-auto order-2 order-md-1">
                     <div class="margin-infra">
                         <div class="sedes_content_slider owl-carousel owl-theme">
                             <div class="sedes_slider">
@@ -330,8 +345,8 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
                     </div>
 
                 </div>
-                <div class="col-lg-6 my-auto">
-                    <div class="margin-infra pt-5">
+                <div class="col-lg-6 my-auto order-1 order-md-2">
+                    <div class="margin-infra pt-3 pt-md-5">
                         <h2>Guerreros de la Cultura</h2>
                         <br>
                         <p><b>Guerreros de la Cultura: Teatro y expresión artística.</b> El proyecto de teatro permite a los estudiantes desarrollar habilidades comunicativas, creatividad y confianza en sí mismos. A través de la interpretación de personajes y la puesta en escena, los alumnos exploran emociones, valores y diferentes perspectivas, fortaleciendo su empatía y trabajo en equipo. El teatro fomenta la expresión oral, el pensamiento crítico y el respeto por la diversidad cultural, contribuyendo a una formación integral y al desarrollo de líderes con sensibilidad social.</p>
@@ -339,9 +354,9 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
                 </div>
 
             </div>
-
             <br>
-            <div class="row">
+
+            <div class="row py-3 ">
                 <div class="col-lg-6 my-auto">
                     <div class="margin-infra">
                         <h2>Olimpiadas Dominguinas</h2>
@@ -365,10 +380,9 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
 
                 </div>
             </div>
-             <br>
-
-            <div class="row py-5">
-                <div class="col-lg-6 my-auto">
+            <br>
+            <div class="row py-3 py-md-5">
+                <div class="col-lg-6 my-auto order-2 order-md-1">
                     <div class="margin-infra">
                         <div class="sedes_content_slider owl-carousel owl-theme">
                             <div class="sedes_slider">
@@ -381,8 +395,8 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
                     </div>
 
                 </div>
-                <div class="col-lg-6 my-auto">
-                    <div class="margin-infra pt-5">
+                <div class="col-lg-6 my-auto order-1 order-md-2">
+                    <div class="margin-infra pt-3 pt-md-5">
                         <h2>!Sangre Dominguina!!Sangre de Campeones!</h2>
                         <br>
                         <p><b>Danzas: Expresión cultural y desarrollo integral.</b> La participación en danzas permite a los estudiantes conectar con sus raíces culturales, fortalecer su identidad y valorar la diversidad. A través del baile, los alumnos desarrollan coordinación, disciplina, trabajo en equipo y confianza en sí mismos. Las danzas fomentan la creatividad, la expresión corporal y el respeto por las tradiciones, contribuyendo a una formación integral que abarca tanto el aspecto físico como emocional y social del estudiante.</p>
@@ -390,9 +404,8 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
                 </div>
 
             </div>
-
             <br>
-            <div class="row">
+            <div class="row py-3 ">
                 <div class="col-lg-6 my-auto">
                     <div class="margin-infra">
                         <h2>Feria de Ciencias - EUREKA</h2>
@@ -416,10 +429,9 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
 
                 </div>
             </div>
- <br>
 
-            <div class="row py-5">
-                <div class="col-lg-6 my-auto">
+            <div class="row py-3 py-md-5">
+                <div class="col-lg-6 my-auto order-2 order-md-1">
                     <div class="margin-infra">
                         <div class="sedes_content_slider owl-carousel owl-theme">
                             <div class="sedes_slider">
@@ -432,8 +444,8 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
                     </div>
 
                 </div>
-                <div class="col-lg-6 my-auto">
-                    <div class="margin-infra pt-5">
+                <div class="col-lg-6 my-auto order-1 order-md-2">
+                    <div class="margin-infra pt-3 pt-md-5">
                         <h2>Gaussmatic</h2>
                         <br>
                         <p>
@@ -444,9 +456,7 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
                 </div>
 
             </div>
-
-            <br>
-            <div class="row">
+            <div class="row py-3">
                 <div class="col-lg-6 my-auto">
                     <div class="margin-infra">
                         <h2>Patriotismo y Cívica</h2>

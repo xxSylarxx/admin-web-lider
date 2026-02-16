@@ -162,7 +162,7 @@
                                 <small class="text-muted">Título que se muestra en la portada</small>
                             </div>
 
-                            <div class="mb-3">
+                            <div class="mb-3" hidden>
                                 <label class="form-label fw-bold">Subtítulo</label>
                                 <textarea class="form-control" name="subtitulo" rows="2"
                                     placeholder="ej: Conoce más sobre nuestra institución"><?= $this->dataPortada['subtitulo'] ?></textarea>
