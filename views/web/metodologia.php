@@ -34,6 +34,8 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
     <!-- OwlCarousel CSS necesario para el carrusel -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
         .portada h2 {
             font-family: "Montserrat", sans-serif;
@@ -294,10 +296,11 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
                 cursor: pointer;
 
             }
-             #proyectos {
-            padding-bottom: 0rem;
 
-        }
+            #proyectos {
+                padding-bottom: 0rem;
+
+            }
 
         }
     </style>
@@ -305,14 +308,14 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
     <section id="proyectos">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 my-auto">
+                <div class="col-lg-6 my-auto" data-aos="flip-left">
                     <div class="margin-infra">
                         <h2>Internacional Singer</h2>
                         <br>
                         <p><b>International Singer: Canto y coreografías en inglés.</b> Este proyecto invita a los estudiantes a explorar el idioma inglés a través de la música y el movimiento. Los niños aprenden canciones en inglés y participan en coreografías grupales, desarrollando habilidades lingüísticas, expresión corporal y confianza. La combinación de canto y baile convierte el aprendizaje en una experiencia divertida y dinámica, promoviendo la pronunciación, el ritmo y el trabajo en equipo.</p>
                     </div>
                 </div>
-                <div class="col-lg-6 my-auto">
+                <div class="col-lg-6 my-auto" data-aos="zoom-in">
 
                     <div class="margin-infra">
                         <div class="sedes_content_slider owl-carousel owl-theme">
@@ -332,7 +335,7 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
             <br>
 
             <div class="row py-3 py-md-5">
-                <div class="col-lg-6 my-auto order-2 order-md-1">
+                <div class="col-lg-6 my-auto order-2 order-md-1" data-aos="zoom-in">
                     <div class="margin-infra">
                         <div class="sedes_content_slider owl-carousel owl-theme">
                             <div class="sedes_slider">
@@ -345,7 +348,7 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
                     </div>
 
                 </div>
-                <div class="col-lg-6 my-auto order-1 order-md-2">
+                <div class="col-lg-6 my-auto order-1 order-md-2" data-aos="flip-right">
                     <div class="margin-infra pt-3 pt-md-5">
                         <h2>Guerreros de la Cultura</h2>
                         <br>
@@ -357,7 +360,7 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
             <br>
 
             <div class="row py-3 ">
-                <div class="col-lg-6 my-auto">
+                <div class="col-lg-6 my-auto" data-aos="flip-left">
                     <div class="margin-infra">
                         <h2>Olimpiadas Dominguinas</h2>
                         <br>
@@ -366,7 +369,7 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6 my-auto">
+                <div class="col-lg-6 my-auto" data-aos="flip-right" data-aos="zoom-in">
                     <div class="margin-infra">
                         <div class="sedes_content_slider owl-carousel owl-theme">
                             <div class="sedes_slider">
@@ -382,7 +385,7 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
             </div>
             <br>
             <div class="row py-3 py-md-5">
-                <div class="col-lg-6 my-auto order-2 order-md-1">
+                <div class="col-lg-6 my-auto order-2 order-md-1" data-aos="zoom-in">
                     <div class="margin-infra">
                         <div class="sedes_content_slider owl-carousel owl-theme">
                             <div class="sedes_slider">
@@ -395,7 +398,7 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
                     </div>
 
                 </div>
-                <div class="col-lg-6 my-auto order-1 order-md-2">
+                <div class="col-lg-6 my-auto order-1 order-md-2" data-aos="flip-right">
                     <div class="margin-infra pt-3 pt-md-5">
                         <h2>!Sangre Dominguina!!Sangre de Campeones!</h2>
                         <br>
@@ -406,7 +409,7 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
             </div>
             <br>
             <div class="row py-3 ">
-                <div class="col-lg-6 my-auto">
+                <div class="col-lg-6 my-auto" data-aos="flip-left">
                     <div class="margin-infra">
                         <h2>Feria de Ciencias - EUREKA</h2>
                         <br>
@@ -415,7 +418,7 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6 my-auto">
+                <div class="col-lg-6 my-auto" data-aos="zoom-in">
                     <div class="margin-infra">
                         <div class="sedes_content_slider owl-carousel owl-theme">
                             <div class="sedes_slider">
@@ -431,7 +434,7 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
             </div>
 
             <div class="row py-3 py-md-5">
-                <div class="col-lg-6 my-auto order-2 order-md-1">
+                <div class="col-lg-6 my-auto order-2 order-md-1" data-aos="zoom-in">
                     <div class="margin-infra">
                         <div class="sedes_content_slider owl-carousel owl-theme">
                             <div class="sedes_slider">
@@ -444,7 +447,7 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
                     </div>
 
                 </div>
-                <div class="col-lg-6 my-auto order-1 order-md-2">
+                <div class="col-lg-6 my-auto order-1 order-md-2" data-aos="flip-right">
                     <div class="margin-infra pt-3 pt-md-5">
                         <h2>Gaussmatic</h2>
                         <br>
@@ -457,7 +460,7 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
 
             </div>
             <div class="row py-3">
-                <div class="col-lg-6 my-auto">
+                <div class="col-lg-6 my-auto" data-aos="flip-left">
                     <div class="margin-infra">
                         <h2>Patriotismo y Cívica</h2>
                         <br>
@@ -466,7 +469,7 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6 my-auto">
+                <div class="col-lg-6 my-auto" data-aos="zoom-in">
                     <div class="margin-infra">
                         <div class="sedes_content_slider owl-carousel owl-theme">
                             <div class="sedes_slider">
@@ -528,6 +531,9 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
                 navText: ["<span style='font-size:1rem;'>&#10094;</span>", "<span style='font-size:1rem;'>&#10095;</span>"]
             });
         });
+    </script>
+    <script>
+        AOS.init();
     </script>
 </body>
 
