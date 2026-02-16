@@ -369,7 +369,7 @@ $dataPortada = $objPortada->obtenerPortada('metodologia');
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6 my-auto" data-aos="flip-right" data-aos="zoom-in">
+                <div class="col-lg-6 my-auto" data-aos="zoom-in">
                     <div class="margin-infra">
                         <div class="sedes_content_slider owl-carousel owl-theme">
                             <div class="sedes_slider">
